@@ -9,7 +9,7 @@ Matter is a component-based theme that organizes UI elements following atomic de
 ## Requirements
 
 - [Drupal 11](https://www.drupal.org/about/drupal-11)
-- [Components](https://www.drupal.org/project/components) module
+- [Components](https://www.drupal.org/project/components)
 - [Node.js](https://nodejs.org)
 
 ## Structure
