@@ -1,0 +1,73 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Title
+description: A component for Title.
+group: Base
+props:
+  type: object
+  properties:
+    title:
+      type: string
+      title: Title
+      examples:
+        - 'Title of lorem ipsum amet'
+    text_color:
+      type: string
+      title: Text Color
+      description: Select text Color
+      enum:
+        - black
+        - white
+        - primary
+      default: black
+      examples:
+        - black
+    title_font_size:
+      type: string
+      title: Title font size
+      description: Select Title font size
+      enum:
+        - '34'
+        - '40'
+        - '45'
+        - '50'
+        - '60'
+        - '70'
+        - '80'
+      meta:enum:
+        '34': '34px'
+        '40': '40px'
+        '45': '45px'
+        '50': '50px'
+        '60': '60px'
+        '70': '70px'
+        '80': '80px'
+      default: '45'
+      examples:
+        - '45'
+    text_align:
+      type: string
+      title: Text align
+      description: Select text align
+      enum:
+        - center
+        - left
+        - right
+      default: center
+      examples:
+        - center
+    heading_level:
+      type: string
+      title: Heading level
+      description: Select Heading level
+      enum:
+        - h1
+        - h2
+        - h3
+      default: h1
+      examples:
+        - h1
+    subtitle:
+      type: string
+      title: Subtitle
+      examples:
+        - 'Subtitle lorem dolor sit amet ipsum.'

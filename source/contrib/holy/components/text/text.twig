@@ -1,0 +1,8 @@
+{% set text_classes = [
+  text_color ? 'tc-' ~ text_color : '',
+  text_align ? 'ta-' ~ text_align : '',
+]|filter(v => v is not empty) %}
+
+<div class="{{ text_classes|join(' ') }}">
+  {{ text|raw }}
+</div>

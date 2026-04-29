@@ -1,0 +1,33 @@
+:root {
+  --white: #fff;
+  --black: #0f2154;
+  --black-80: #3f4d76;
+  --black-60: #6f7a98;
+  --black-05: #f3f4f6;
+  --primary: #009cde;
+  --primary-10: #e5f5fc;
+  --primary-vivid: #30cdff;
+  --primary-vivid-25: #cbf2ff;
+  --primary-vivid-40: #99d7f2;
+  --primary-vivid-60: #66c4eb;
+  --primary-vivid-80: #33b0e5;
+  --primary-darker: #006894;
+  --primary-damped: #bad9e5;
+  --primary-dark: #122a70;
+  --gray-10: #1a1a1a;
+  --gray-20: #333333;
+  --gray-30: #4d4d4d;
+  --gray-40: #666666;
+  --gray-50: #808080;
+  --gray-60: #999999;
+  --gray-70: #b3b3b3;
+  --gray-80: #cccccc;
+  --gray-90: #e6e6e6;
+  --screen-xs-min: 20rem;
+  --screen-sm-min: 30rem;
+  --screen-md-min: 53.125rem;
+  --screen-lg-min: 85rem;
+  --screen-xs-max: 29.9375rem;
+  --screen-sm-max: 53.0625rem;
+  --screen-md-max: 84.9375rem;
+}

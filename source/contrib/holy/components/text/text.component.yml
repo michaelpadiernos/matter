@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Text
+description: A component for rich text.
+group: Base
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Rich text
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique pretium pellentesque semper enim aliquam. Vestibulum elit facilisi ridiculus netus blandit diam turpis tempor eleifend vehicula ligula. Elit neque nam morbi viverra congue maximus.</p>
+    text_color:
+      type: string
+      title: Text color
+      description: Select Text color
+      enum:
+        - black
+        - white
+        - primary
+      default: black
+      examples:
+        - black
+    text_align:
+      type: string
+      title: Text align
+      description: Select text align
+      enum:
+        - center
+        - left
+        - right
+      default: left
+      examples:
+        - left

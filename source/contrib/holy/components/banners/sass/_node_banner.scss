@@ -1,0 +1,22 @@
+.node--type-banner {
+  text-align: center;
+
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    img {
+      width: auto;
+      max-width: 150px;
+      height: auto;
+      max-height: 100px;
+      filter: grayscale(1);
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

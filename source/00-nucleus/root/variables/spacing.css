@@ -1,0 +1,9 @@
+:root {
+  --gutter: 2rem;
+  --gap: 1.5rem;
+  --gap-alt: 0.5em;
+  --spacing: 0.15em;
+  --padding-block: 0.75rem;
+  --padding-inline: 1rem;
+  --padding-default: var(--padding-block) var(--padding-inline);
+}

@@ -4,13 +4,17 @@ A custom Drupal 11 base theme built around atomic design principles and a modern
 
 ## Overview
 
-Matter is a component-based Drupal theme organized around [atomic design](https://atomicdesign.bradfrost.com) principles by [Brad Frost](https://bradfrost.com) — atoms, molecules, and organisms — for a consistent and maintainable design system. Styles are authored in plain, modern CSS with no preprocessors (Sass, Stylus) or utility frameworks (Bootstrap, Tailwind); native CSS features are preferred throughout.
+Matter is a component-based Drupal base theme built on [atomic design](https://atomicdesign.bradfrost.com) principles by [Brad Frost](https://bradfrost.com) — atoms, molecules, and organisms — for a consistent and maintainable design system. Styles are written in plain, modern CSS using native features exclusively — no preprocessors (Sass, Stylus) or utility frameworks (Bootstrap, Tailwind).
 
 ## Requirements
 
-- [Drupal 11](https://www.drupal.org/about/drupal-11)       - Drupal core version 11 or higher
-- [Components](https://www.drupal.org/project/components)   - Drupal module
-- [Node.js](https://nodejs.org)                             - Node.js version 14 or higher for asset compilation
+- [Drupal 11](https://www.drupal.org/about/drupal-11)           - Drupal core 11 or higher
+- [Components](https://www.drupal.org/project/components)       - Drupal module
+- [UI Icons](https://www.drupal.org/project/ui_icons)           - Drupal module
+- [UI Patterns](https://www.drupal.org/project/ui_patterns)     - Drupal module
+- [UI Skins](https://www.drupal.org/project/ui_skins)           - Drupal module
+- [UI Styles](https://www.drupal.org/project/ui_styles)         - Drupal module
+- [Node.js](https://nodejs.org)                                 - Node.js 14 or higher for asset compilation
 
 ## Structure
 
@@ -25,7 +29,7 @@ matter/
 │   ├── 02-molecules/        # SDC wiring for molecule-level components
 │   └── 03-organisms/        # SDC wiring for organism-level components
 └── source/                  # Authored source — CSS, JS, and Twig templates
-    ├── 00-core/             # Design tokens, custom properties, typography, and reset styles
+    ├── 00-nucleus/          # Design tokens, custom properties, typography, and reset styles
     ├── 01-atoms/            # Foundational UI elements: buttons, inputs, images
     ├── 02-molecules/        # Composite patterns assembled from atoms
     ├── 03-organisms/        # Self-contained page sections built from molecules

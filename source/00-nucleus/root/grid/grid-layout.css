@@ -1,0 +1,163 @@
+.grid-global {
+  /* Layout variables - easier to customize */
+  --gutter-mobile: 1.5rem;
+  --gutter-desktop: 2rem;
+  --gutter: var(--gutter-mobile);
+
+  /* Content width constraints */
+  --content-max-width: 85rem;   /* ~1350px */
+  --wrapper-max-width: 75.75rem;    /* ~1100px */
+  --narrow-max-width: 42.875rem;    /* ~750px */
+
+  /* Prevent overflow on all screen sizes */
+  max-inline-size: 100vi;
+  overflow-inline: hidden;
+
+  /* Calculated sizes for responsive behavior */
+  --content-size: calc((var(--content-max-width) - var(--wrapper-max-width)) / 2);
+  --wrapper-size: calc((var(--wrapper-max-width) - var(--narrow-max-width)) / 2);
+
+  /* Base grid setup with advanced layout as default */
+  display: grid;
+  min-block-size: 100dvb;
+
+  grid-template:
+    "header" auto "main" 1fr "footer" auto /
+    [page-start]
+      minmax(var(--gutter), 1fr)
+    [content-start]
+      minmax(0, var(--content-size))
+    [wrapper-start]
+      minmax(0, var(--wrapper-size))
+    [narrow-start]
+      minmax(0, var(--narrow-max-width))
+    [narrow-end]
+      minmax(0, var(--wrapper-size))
+    [wrapper-end]
+      minmax(0, var(--content-size))
+    [content-end]
+      minmax(var(--gutter), 1fr)
+    [page-end];
+
+  /* Responsive grid template that prevents overflow */
+
+  /* Simple fallback layout */
+  &.simple {
+    grid-template-columns:
+      [page-start]
+        minmax(var(--gutter), 1fr)
+      [wrapper-start]
+        minmax(0, var(--wrapper-max-width))
+      [wrapper-end]
+        minmax(var(--gutter), 1fr)
+      [page-end];
+  }
+
+  /* Sidebar layouts */
+  &.with-sidebar {
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+    grid-template-rows: auto 1fr auto auto;
+  }
+
+  /* Two-column sidebar layout */
+  &.with-sidebar-columns {
+    grid-template:
+      "header  header" auto "main    sidebar" 1fr "footer  footer" auto / 1fr minmax(250px, 33%);
+    gap: var(--gutter);
+  }
+}
+
+/* Mobile-first: Simple grid to prevent overflow */
+@media screen and (max-width: 47.99rem) {
+  .grid-global {
+    grid-template-columns:
+      [page-start]
+      var(--gutter)
+      [content-start wrapper-start narrow-start]
+      minmax(0, 1fr)
+      [narrow-end wrapper-end content-end]
+      var(--gutter)
+      [page-end];
+  }
+}
+
+/* Responsive breakpoints */
+@media screen and (min-width: 48rem) {
+  .grid-global {
+    --gutter: 2.5rem;
+
+    /* Enable basic named grid lines */
+    grid-template-columns:
+      [page-start]
+      minmax(var(--gutter), 1fr)
+      [content-start]
+      minmax(0, var(--content-size))
+      [wrapper-start narrow-start]
+      minmax(0, var(--narrow-max-width))
+      [narrow-end wrapper-end]
+      minmax(0, var(--content-size))
+      [content-end]
+      minmax(var(--gutter), 1fr)
+      [page-end];
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .grid-global {
+    --gutter: var(--gutter-desktop);
+
+    /* Full advanced grid layout */
+    grid-template-columns:
+      [page-start]
+      minmax(var(--gutter), 1fr)
+      [content-start]
+      minmax(0, var(--content-size))
+      [wrapper-start]
+      minmax(0, var(--wrapper-size))
+      [narrow-start]
+      minmax(0, var(--narrow-max-width))
+      [narrow-end]
+      minmax(0, var(--wrapper-size))
+      [wrapper-end]
+      minmax(0, var(--content-size))
+      [content-end]
+      minmax(var(--gutter), 1fr)
+      [page-end];
+
+    /* Enhanced sidebar layout for desktop */
+    &.with-sidebar {
+      grid-template:
+        "header  header" auto "main    sidebar" 1fr "footer  footer" auto / 1fr minmax(280px, 25%);
+    }
+
+    /* Three-column layout option */
+    &.with-dual-sidebar {
+      grid-template:
+        "header   header   header" auto "sidebar1 main     sidebar2" 1fr "footer   footer   footer" auto / minmax(200px, 20%) 1fr minmax(200px, 20%);
+    }
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .grid-global {
+    /* Larger screens get more generous spacing */
+    --gutter: 2.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .grid-global {
+    --gutter: 1rem;
+
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}

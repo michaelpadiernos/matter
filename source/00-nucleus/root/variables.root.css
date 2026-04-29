@@ -1,0 +1,10 @@
+:root {
+  --page-title-size: 3.815em;
+  --default-accent: #efe100;
+  --default-background--light: var(--color-white--001);
+  --default-background--dark: var(--color-black--001);
+  --border-size: 2px;
+  --border-radius: 3px;
+  --toolbar-height: 49px;
+  --toolbars-height: calc(var(--toolbar-height) + 48px);
+}

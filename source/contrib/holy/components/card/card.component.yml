@@ -1,0 +1,50 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Card
+description: Basic card with image, title, teaser, tags
+group: Components/Cards
+props:
+  type: object
+  properties:
+    heading_text:
+      type: string
+      title: Heading Text
+      examples:
+        - 'This is my title eu torquent suscipit'
+    heading_level:
+      type: string
+      title: Heading level
+      description: Select Heading level
+      enum:
+        - h2
+        - h3
+        - h4
+      default: h2
+      examples:
+        - h2
+    url:
+      type: string
+      title: Link
+      default: 'https://www.example.com'
+      examples: 
+        - 'https://www.example.com'
+    media:
+      $ref: json-schema-definitions://canvas.module/image
+      title: Card Media
+      description: Media and Alt for the card.
+      type: object
+      examples:
+        - src: 'images/277628-911758.jpg'
+          alt: 'Photo by gdtography: https://www.pexels.com/photo/long-exposure-photography-white-dome-building-interior-911758/'
+    media_view:
+      type: boolean
+      title: Show media image
+      examples:
+        - true
+      default:
+        - true
+    text:
+      type: string
+      title: Text
+      description: Teaser text
+      examples:
+        - 'Quaerat laborum rerum dolores dolores dolor qui. Laudantium itaque sint aut culpa omnis eius pariatur. Quia laborum commodi excepturi neque tempore. Fuga dolor dolores perspiciatis.'

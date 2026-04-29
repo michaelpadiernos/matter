@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/regular/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/regular/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/roboto/regular/Roboto-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../../assets/fonts/roboto/mono/RobotoMono-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../../assets/fonts/roboto/mono/RobotoMono-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../../assets/fonts/roboto/mono/RobotoMono-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../assets/fonts/roboto/slab/RobotoSlab-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../../assets/fonts/roboto/slab/RobotoSlab-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}

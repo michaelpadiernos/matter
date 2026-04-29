@@ -1,0 +1,20 @@
+{% set heading_classes = [
+  text_color ? 'tc-' ~ text_color : '',
+  title_font_size ? 'fs-' ~ title_font_size : '',
+  text_align ? 'ta-' ~ text_align : '',
+]|filter(v => v is not empty) %}
+
+{% set text_classes = [
+  text_color ? 'tc-' ~ text_color : '',
+  text_align ? 'ta-' ~ text_align : '',
+]|filter(v => v is not empty) %}
+
+<div class="sdc-title">
+  <{{ heading_level | default('h2') }} class="{{ heading_classes|join(' ') }}">
+    {{ title }}
+  </{{ heading_level | default('h2') }}>
+
+  {% if subtitle is not empty %}
+    <p class="{{ text_classes|join(' ') }}">{{ subtitle }}</p>
+  {% endif %}
+</div>

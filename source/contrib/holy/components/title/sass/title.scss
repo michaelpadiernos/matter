@@ -1,0 +1,43 @@
+.sdc-title {
+  h1, h2 {
+    padding: 0;
+    margin: 0 0 5px 0;
+  }
+
+  .size-100 {
+    font-size: 34px;
+  }
+
+  .size-125 {
+    font-size: calc(34px * 1.25);
+  }
+
+  .size-150 {
+    font-size: calc(34px * 1.5);
+  }
+
+  .size-175 {
+    font-size: calc(34px * 1.75);
+  }
+
+  .size-200 {
+    font-size: calc(34px * 2);
+  }
+
+  .size-225 {
+    font-size: calc(34px * 2.25);
+  }
+
+  .size-250 {
+    font-size: calc(34px * 2.5);
+  }
+
+  .size-275 {
+    font-size: calc(34px * 2.75);
+  }
+
+  .size-300 {
+    font-size: calc(34px * 3);
+  }
+
+}

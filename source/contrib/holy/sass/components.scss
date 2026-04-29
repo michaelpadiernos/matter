@@ -1,0 +1,5 @@
+@import 'variables';
+
+@layer component {
+  @import 'components/**/*';
+}

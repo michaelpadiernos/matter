@@ -1,0 +1,28 @@
+.view-banners .view-content {
+  display: flex;
+  align-items: center;
+  padding: 7.5rem 0;
+}
+.view-banners .view-content .views-row {
+  margin: 0 !important;
+}
+
+.node--type-banner {
+  text-align: center;
+}
+.node--type-banner .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.node--type-banner .image img {
+  width: auto;
+  max-width: 9.375rem;
+  height: auto;
+  max-height: 6.25rem;
+  filter: grayscale(1);
+}
+.node--type-banner .image img:hover {
+  filter: grayscale(0);
+}

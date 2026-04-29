@@ -1,0 +1,40 @@
+{% set section_classes = [
+  'hero_billboard',
+  height ? 'h-' ~ height : '',
+]|filter(v => v is not empty) %}
+
+{% set image_classes = [
+  'image',
+  height ? 'h-' ~ height : '',
+]|filter(v => v is not empty) %}
+
+{% set text_classes = [
+  'text',
+  text_align ? 'ta-' ~ text_align : '',
+  vertical_align ? 'fjc-' ~ vertical_align : '',
+  text_color ? 'tc-' ~ text_color : '',
+]|filter(v => v is not empty) %}
+
+{% set text_color_classes = [
+  'text',
+  text_color ? 'tc-' ~ text_color : '',
+]|filter(v => v is not empty) %}
+
+{% set overlay_classes = [
+  opacity ? 'o-' ~ opacity : '',
+]|filter(v => v is not empty) %}
+
+<section class="{{ section_classes|join(' ') }}">
+  {% if media.src is not empty %}
+    <div class="{{ image_classes|join(' ') }}">
+    {% block hero_media %}
+      <img src="{{ media.src }}" alt="{{ media.alt }}"/>
+      <div class="overlay {{ overlay_classes|join(' ') }}"></div>
+    {% endblock %}
+    </div>
+  {% endif %}
+  <div class="{{ text_classes|join(' ') }}">
+    <{{ heading_level | default('h2') }} class="{{ text_color_classes|join(' ') }}">{{ title }}</{{ heading_level | default('h2') }}>
+    {{ text|raw }}
+  </div>
+</section>

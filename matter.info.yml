@@ -9,6 +9,10 @@ libraries:
 
 dependencies:
   - components:components
+  - ui_icons:ui_icons
+  - ui_patterns:ui_patterns
+  - ui_skins:ui_skins
+  - ui_styles:ui_styles
 
 regions:
   branding                          : "Branding"

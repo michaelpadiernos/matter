@@ -1,0 +1,76 @@
+.view-intro {
+  position: relative;
+
+  .view-content {
+    overflow: hidden;
+    height: 500px;
+
+    .views-row {
+      margin-bottom: 0;
+    }
+  }
+
+  // controls
+  .tns-controls {
+    button[data-controls='prev'] {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 20px;
+      overflow: hidden;
+      width: 80px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      text-indent: 300px;
+      border: 0;
+      background: url('images/intro-navigation-prev.svg') no-repeat 50% 50%;
+      background-size: 25px;
+    }
+
+    button[data-controls='next'] {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 20px;
+      overflow: hidden;
+      width: 80px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      text-indent: 300px;
+      border: 0;
+      background: url('images/intro-navigation-next.svg') no-repeat 50% 50%;
+      background-size: 25px;
+    }
+  }
+
+  // dots
+  .tns-nav {
+    position: absolute;
+    z-index: 1;
+    bottom: 50px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin-left: -250px;
+    gap: 13px;
+
+    button {
+      width: 13px;
+      height: 13px;
+      opacity: 0.75;
+      border: 0;
+      border-radius: 100%;
+      background-color: $white;
+    }
+
+    button.tns-nav-active {
+      opacity: 1;
+      background-color: $primary;
+    }
+  }
+}

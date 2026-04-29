@@ -1,0 +1,17 @@
+.h-full {
+    height: 100%;
+}
+
+.h-win {
+    height: 100vh;
+}
+
+.h-dwin {
+    height: 100dvh;
+}
+
+@for $i from 0 through 1000 {
+  .h-#{$i} {
+    height: #{$i}px;
+  }
+}

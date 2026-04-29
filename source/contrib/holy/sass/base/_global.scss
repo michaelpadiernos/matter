@@ -1,0 +1,15 @@
+/* reset */
+*,
+::after,
+::before,
+::backdrop {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+/* focus */
+*:focus {
+  outline: 0;
+}

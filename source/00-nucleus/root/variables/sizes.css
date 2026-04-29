@@ -1,0 +1,7 @@
+:root {
+  --height: max(1.5rem, 4rem);
+
+  /* Page Title Sizes */
+  --page-title-size: clamp(2rem, 5vi, 3.5rem);
+  --page-title-sub-size: clamp(0.75rem, 1.5vi, 1.125rem);
+}

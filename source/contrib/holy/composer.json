@@ -1,0 +1,10 @@
+{
+    "name": "drupal/holy",
+    "description": "Drupal theme with respect to atomic structure of webdesign.",
+    "type": "drupal-theme",
+    "homepage": "https://www.drupal.org/project/holy",
+    "license": "GPL-2.0-or-later",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/holy"
+    }
+}
