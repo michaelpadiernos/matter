@@ -1,9 +1,0 @@
-{% block media %}
-  <div class="image">
-    {% if url is not empty %}
-      <a href="{{ url }}"><img src="{{ media.src }}" alt="{{ media.alt }}" ></img></a>
-    {% else %}
-      <img src="{{ media.src }}" alt="{{ media.alt }}" ></img>
-    {% endif %}
-  </div>
-{% endblock %}
