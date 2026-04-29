@@ -8,9 +8,9 @@ Matter is a component-based theme that organizes UI elements following atomic de
 
 ## Requirements
 
-- [Drupal 11](https://www.drupal.org/about/drupal-11)       [Drupal core version 11 or higher]
-- [Components](https://www.drupal.org/project/components)   [Drupal module]
-- [Node.js](https://nodejs.org)                             [Node.js version 14 or higher for asset compilation]
+- [Drupal 11](https://www.drupal.org/about/drupal-11)       - Drupal core version 11 or higher
+- [Components](https://www.drupal.org/project/components)   - Drupal module
+- [Node.js](https://nodejs.org)                             - Node.js version 14 or higher for asset compilation
 
 ## Structure
 
