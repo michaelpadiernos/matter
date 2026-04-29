@@ -1,0 +1,9 @@
+global-styling:
+  css:
+    theme:
+      assets/css/matter.theme.css: {}
+  js:
+    assets/js/matter.theme.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery

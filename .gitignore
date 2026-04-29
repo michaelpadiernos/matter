@@ -1,0 +1,9 @@
+# Library: Node Modules
+node_modules/
+
+# Tools: NPM
+package-lock.json
+
+# Ignore IDE and Editor files
+.vscode/
+.idea/

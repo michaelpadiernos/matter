@@ -1,0 +1,63 @@
+matter:
+  enabled: true
+  label: "Matter Icons (FontAwesome Free)"
+  description: "The Matter base theme FontAwesome icon library and toolkit."
+  links:
+    - https://fontawesome.com/icons
+    - https://docs.fontawesome.com/web/add-icons/svg-sprites
+  version: 7.2.0
+  license:
+    name: CC BY 4.0
+    url: https://fontawesome.com/license/free
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - assets/images/Font-Awesome/svgs/{brands,regular,solid}/{icon_id}.svg
+      - assets/images/Font-Awesome/svgs-full/{brands,regular,solid}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 64
+    color:
+      title: Color
+      type: string
+      format: color
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >-
+    <style>
+      svg.icon-svg {
+        --max-height: {{ size|default(64) }}px;
+
+        display: block;
+        fill: {{ color|default("#000000") }};
+        min-inline-size: var(--max-height);
+        min-block-size: var(--max-height);
+        max-inline-size: var(--max-height);
+        max-block-size: var(--max-height);
+        > * {
+          vector-effect: non-scaling-stroke;
+          fill: {{ color|default("#000000") }};
+          min-inline-size: var(--max-height);
+          min-block-size: var(--max-height);
+          max-inline-size: var(--max-height);
+          max-block-size: var(--max-height);
+        }
+      }
+    </style>
+    <svg
+      class="icon-svg"
+      role="img"
+      {% if alt %}
+        aria-label="{{ alt }}"
+      {% else %}
+        aria-hidden="true"
+      {% endif %}
+      viewBox="0 0 640 640"
+    >
+      {{ content }}
+    </svg>

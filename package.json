@@ -1,0 +1,29 @@
+{
+  "name": "dna",
+  "version": "0.0.1",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "gulp"
+  },
+  "devDependencies": {
+    "cqfill": "^0.6.1",
+    "gulp": "^5.0.1",
+    "gulp-cli": "^3.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.5.12",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1",
+    "postcss-import-ext-glob": "^2.1.1",
+    "postcss-lightningcss": "^1.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.2.0"
+  }
+}

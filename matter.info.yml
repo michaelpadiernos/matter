@@ -1,0 +1,28 @@
+name: Matter
+type: theme
+description: "Modern component-based Drupal theme with atomic design structure and PostCSS workflow"
+core_version_requirement: ^11
+base theme: false
+
+libraries:
+  - matter/global-styling
+
+dependencies:
+  - components:components
+
+regions:
+  branding                          : "Branding"
+  navigation                        : "Navigation"
+  focus                             : "Focus"
+  hero                              : "Hero"
+  highlight                         : "Highlight"
+  content                           : "Content"
+  sidebar                           : "Sidebar"
+  footer                            : "Footer"
+  buffer                            : "Buffer"
+
+components:
+  namespaces:
+    core                            : source/00-core
+    symbiosis                       : source/01-symbiosis
+    synergy                         : source/02-synergy
