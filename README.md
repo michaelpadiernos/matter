@@ -54,17 +54,17 @@ The pipeline processes `source/matter.source.css` through PostCSS (import resolu
 
 ## Regions
 
-| Key          | Label      |
-|--------------|------------|
-| `branding`   | Branding   |
-| `navigation` | Navigation |
-| `focus`      | Focus      |
-| `hero`       | Hero       |
-| `highlight`  | Highlight  |
-| `content`    | Content    |
-| `sidebar`    | Sidebar    |
-| `footer`     | Footer     |
-| `buffer`     | Buffer     |
+| Key          | Label      | Description                                                                      |
+|--------------|------------|----------------------------------------------------------------------------------|
+| `branding`   | Branding   | Site logo, name, and slogan                                                      |
+| `navigation` | Navigation | Primary site navigation menus                                                    |
+| `focus`      | Focus      | Skip-link and accessibility-focused elements                                     |
+| `hero`       | Hero       | Full-width introductory or promotional content                                   |
+| `highlight`  | Highlight  | Prominent callout content above the main area                                    |
+| `content`    | Content    | Main page content                                                                |
+| `sidebar`    | Sidebar    | Supplementary content alongside the main area                                    |
+| `footer`     | Footer     | Site-wide footer content and secondary navigation                                |
+| `buffer`     | Buffer     | Hidden region for parking blocks that must remain enabled but not render visibly |
 
 ## Icons
 
