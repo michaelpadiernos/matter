@@ -71,4 +71,10 @@ The pipeline processes `source/matter.source.css` through PostCSS (import resolu
 
 ## Typography
 
-[Roboto](https://fonts.google.com/specimen/Roboto) by [Christian Robertson](https://fonts.google.com/?query=Christian+Robertson) is used as the theme's primary typeface. Licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+Three members of the Roboto family are used throughout the theme, all designed by [Christian Robertson](https://fonts.google.com/?query=Christian+Robertson) and licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+| Typeface                                                         | Role                                    |
+|------------------------------------------------------------------|-----------------------------------------|
+| [Roboto](https://fonts.google.com/specimen/Roboto)               | Primary sans-serif for body and UI text |
+| [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)     | Monospace for code and technical content|
+| [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)     | Serif for headings and editorial content|
