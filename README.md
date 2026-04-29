@@ -4,7 +4,7 @@ A custom Drupal 11 base theme built around atomic design principles and a modern
 
 ## Overview
 
-Matter is a component-based theme that organizes UI elements following atomic design — atoms, molecules, and organisms — making it straightforward to build and maintain a consistent design system.
+Matter is a component-based Drupal theme organized around [atomic design](https://atomicdesign.bradfrost.com) principles by [Brad Frost](https://bradfrost.com) — atoms, molecules, and organisms — for a consistent and maintainable design system. Styles are authored in plain, modern CSS with no preprocessors (Sass, Stylus) or utility frameworks (Bootstrap, Tailwind); native CSS features are preferred throughout.
 
 ## Requirements
 
