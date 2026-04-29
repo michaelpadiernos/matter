@@ -8,10 +8,9 @@ Matter is a component-based theme that organizes UI elements following atomic de
 
 ## Requirements
 
-- Drupal 11
+- [Drupal 11](https://www.drupal.org/about/drupal-11)
 - [Components](https://www.drupal.org/project/components) module
-- [Body Roles Classes](https://www.drupal.org/project/body_roles_classes) module
-- Node.js / npm
+- [Node.js](https://nodejs.org)
 
 ## Structure
 
@@ -68,4 +67,8 @@ The pipeline processes `source/matter.source.css` through PostCSS (import resolu
 
 ## Icons
 
-Font Awesome Free is included as a dependency and available throughout the theme.
+[Font Awesome Free](https://fontawesome.com) by [Fonticons, Inc.](https://fonticons.com) is included as a dependency and available throughout the theme. Icons are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), fonts under [SIL OFL 1.1](https://scripts.sil.org/OFL), and code under [MIT](https://opensource.org/licenses/MIT).
+
+## Typography
+
+[Roboto](https://fonts.google.com/specimen/Roboto) by [Christian Robertson](https://fonts.google.com/?query=Christian+Robertson) is used as the theme's primary typeface. Licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
