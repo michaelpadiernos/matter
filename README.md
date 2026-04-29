@@ -49,7 +49,9 @@ Watch for changes during development:
 gulp
 ```
 
-The pipeline processes `source/matter.source.css` through PostCSS (import resolution, container query polyfill, Lightning CSS minification) and outputs `assets/css/matter.theme.css`.
+The styles pipeline processes `source/matter.source.css` through PostCSS (import resolution, container query polyfill, Lightning CSS minification) and outputs `assets/css/matter.theme.css`.
+
+The scripts pipeline processes `source/matter.source.js` through UglifyJS (minification with top-level mangling) and outputs `assets/js/matter.theme.js`.
 
 ## Regions
 
