@@ -9,6 +9,7 @@ libraries:
 
 dependencies:
   - components:components
+  - mgv:mgv
   - ui_icons:ui_icons
   - ui_patterns:ui_patterns
   - ui_skins:ui_skins
@@ -27,6 +28,9 @@ regions:
 
 components:
   namespaces:
-    core                            : source/00-core
-    symbiosis                       : source/01-symbiosis
-    synergy                         : source/02-synergy
+    nucleus                         : source/00-nucleus
+    atoms                           : source/01-atoms
+    molecules                       : source/02-molecules
+    organisms                       : source/03-organisms
+    symbiosis                       : source/04-symbiosis
+    synergy                         : source/05-synergy

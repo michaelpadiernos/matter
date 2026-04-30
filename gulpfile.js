@@ -32,7 +32,7 @@ const path = {
 }
 
 function lint() {
-  return src('./source/**/*.css')
+  return src(['./source/**/*.css', '!./source/matter.source.css'])
     .pipe(gulp_postcss([
       stylelint(),
       postcss_reporter({ clearReportedMessages: true, throwError: true })
@@ -42,8 +42,8 @@ function lint() {
 function styles() {
   const processors = [
     postcss_cq,
-    postcss_import,
     postcss_imports,
+    postcss_import,
 
     postcss_lightningcss({
       browsers: 'last 2 versions, not dead',

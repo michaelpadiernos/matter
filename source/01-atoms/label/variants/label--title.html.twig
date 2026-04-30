@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Template for rendering title labels.
+ *
+ * This template extends the base label template to provide specialized rendering
+ * for title labels. It conditionally applies the "visually-hidden" class based on
+ * the label display setting, allowing titles to be visually hidden while remaining
+ * accessible to screen readers.
+ *
+ * Variables:
+ *   - label: The text content of the label.
+ *   - label_display: Controls label visibility. Accepted values:
+ *     - 'visually_hidden': Hides the label visually but keeps it accessible.
+ *     - Any other value: Shows the label normally.
+ *   - title_attributes: HTML attributes object for the label wrapper div.
+ *
+ * Blocks:
+ *   - label: Renders the label content wrapped in a div with conditional classes.
+ *
+ * CSS Classes:
+ *   - visually-hidden: Applied when label_display is 'visually_hidden' to hide
+ *     the label visually while maintaining screen reader accessibility.
+ *
+ * @ingroup templates
+ *
+ * @see label.html.twig
+ */
+#}
+
+{% extends '@atoms/label/label.html.twig' %}
+
+{%
+  set title_classes = [
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+{% block label %}
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+{% endblock label %}

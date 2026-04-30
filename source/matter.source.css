@@ -10,9 +10,4 @@
 @import "./00-nucleus/defaults.nucleus.css";
 
 /* Atomic design imports using postcss-import-ext-glob */
-/* @import-glob "./01-atoms/" */
-/* @import-glob "./02-molecules/" */
-/* @import-glob "./03-organisms/" */
-/* @import-glob "./04-symbiosis/" */
-/* @import-glob "./05-synergy/" */
-
+@import-glob "./01-atoms/**/*.css";
