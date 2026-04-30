@@ -20,7 +20,12 @@
   header {
     grid-row: header;
 
-      @media (width < 1700px) {
+    :is(.block-system) {
+      align-items: center;
+      min-block-size: 100%;
+    }
+
+    @media (width < 1700px) {
       grid-template-columns: auto 1fr auto;
     }
   }

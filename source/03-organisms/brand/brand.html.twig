@@ -1,0 +1,17 @@
+{% if site_logo or site_name or site_slogan %}
+  {% if site_logo %}
+    {% include '@molecules/brand_item/variants/brand-item--logo.html.twig' %}
+  {% endif %}
+
+  {% if site_name %}
+    {% include '@molecules/brand_item/variants/brand-item--name.html.twig' %}
+  {% endif %}
+
+  {% if site_slogan %}
+    {% include '@molecules/brand_item/variants/brand-item--slogan.html.twig' %}
+  {% endif %}
+{% else %}
+  <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="brand-item__name">
+    {{ global_variables.site_name }}
+  </a>
+{% endif %}

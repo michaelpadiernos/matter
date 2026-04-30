@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Base template for rendering labels.
+ *
+ * This is the foundational label template that provides a single extensible block
+ * for rendering label content. It serves as the parent template for specialized
+ * label variants (such as title labels) and can be extended to add custom markup,
+ * attributes, and styling.
+ *
+ * Variables:
+ *   - label: The text content or markup to be displayed as the label.
+ *
+ * Blocks:
+ *   - label: Contains the label content. Can be overridden by child templates
+ *     to add wrappers, attributes, or conditional rendering logic.
+ *
+ * Usage:
+ *   This template is typically extended by variant templates to provide
+ *   specialized rendering. Direct usage should output the label text.
+ *
+ * Examples of child templates:
+ *   - label--title.html.twig: Renders title-specific labels with optional
+ *     visual hiding capabilities.
+ *
+ * @ingroup templates
+ */
+#}
+
+{% block label %}
+  {{ label }}
+{% endblock label %}

@@ -1,0 +1,7 @@
+{% extends '@molecules/brand_item/brand-item.html.twig' %}
+
+{% block brand_item %}
+  <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="brand-item__logo">
+    <img src="{{ site_logo }}" class="brand-item__logo-image" alt="{{ 'Home'|t }}" typeof="foaf:Image"/>
+  </a>
+{% endblock brand_item %}
