@@ -50,7 +50,7 @@ npm install
 Watch for changes during development:
 
 ```bash
-gulp
+npx gulp
 ```
 
 The styles pipeline processes `source/matter.source.css` through PostCSS (import resolution, container query polyfill, Lightning CSS minification) and outputs `assets/css/matter.theme.css`.

@@ -1,10 +1,70 @@
 :root {
-  --color-white--001: white;
-  --color-white--002: #f5f4f4;
-  --color-white--003: #eae9e9;
-  --color-white--004: #b7b7b6;
-  --color-black--001: black;
-  --color-black--002: #100f0d;
-  --color-black--003: #282725;
-  --color-black--004: #585756;
+  /* light */
+  --color-light--001: white;
+  --color-light--002: #f5f4f4;
+  --color-light--003: #eae9e9;
+  --color-light--004: #b7b7b6;
+
+  /* dark */
+  --color-dark--001: black;
+  --color-dark--002: #100f0d;
+  --color-dark--003: #282725;
+  --color-dark--004: #585756;
+
+  /* yellow */
+  --color-yellow--001: #efe100;
+
+  /* blue */
+  --color-blue--001: #07c;
+}
+
+@media(prefers-color-scheme: light) {
+  :root {
+    --neutral-50: hsl(220deg 20% 98%);
+    --neutral-100: hsl(220deg 18% 96%);
+    --neutral-200: hsl(220deg 16% 94%);
+    --neutral-300: hsl(220deg 14% 92%);
+    --neutral-400: hsl(220deg 14% 90%);
+    --neutral-500: hsl(220deg 14% 85%);
+    --neutral-600: hsl(220deg 12% 75%);
+    --neutral-700: hsl(220deg 10% 55%);
+    --neutral-800: hsl(220deg 12% 40%);
+    --neutral-900: hsl(220deg 20% 10%);
+    --brand-blue: hsl(220deg 74% 41%);
+    --brand-red: hsl(357deg 68% 53%);
+    --color-state-success: hsl(160deg 60% 45%);
+    --color-state-warning: hsl(38deg 90% 50%);
+    --color-state-error: hsl(357deg 68% 58%)
+  }
+}
+
+[data-theme="light"] {
+  --neutral-50: hsl(220deg 20% 98%);
+  --neutral-100: hsl(220deg 18% 96%);
+  --neutral-200: hsl(220deg 16% 94%);
+  --neutral-300: hsl(220deg 14% 92%);
+  --neutral-400: hsl(220deg 14% 90%);
+  --neutral-500: hsl(220deg 14% 85%);
+  --neutral-600: hsl(220deg 12% 75%);
+  --neutral-700: hsl(220deg 10% 55%);
+  --neutral-800: hsl(220deg 12% 40%);
+  --neutral-900: hsl(220deg 20% 10%);
+  --brand-blue: hsl(220deg 74% 41%);
+  --brand-red: hsl(357deg 68% 53%)
+}
+
+[data-theme="dark"] {
+  --neutral-900: hsl(60deg 4% 85%);
+  --neutral-800: hsl(60deg 3% 70%);
+  --neutral-700: hsl(60deg 2% 50%);
+  --neutral-600: hsl(60deg 5% 35%);
+  --neutral-500: hsl(60deg 4% 28%);
+  --neutral-400: hsl(60deg 3% 24%);
+  --neutral-300: hsl(60deg 2% 22%);
+  --neutral-200: hsl(60deg 3% 19%);
+  --neutral-100: hsl(60deg 4% 16%);
+  --neutral-50: hsl(60deg 5% 13%);
+  --color-state-success: hsl(160deg 60% 45%);
+  --color-state-warning: hsl(38deg 90% 50%);
+  --color-state-error: hsl(357deg 68% 58%)
 }

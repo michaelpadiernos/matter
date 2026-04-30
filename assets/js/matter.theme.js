@@ -1,0 +1,1 @@
+Drupal.behaviors.matter={attach:function(t,a){console.log("Matter theme loaded")}};

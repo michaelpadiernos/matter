@@ -1,10 +1,18 @@
+@import "./variables/colors.css";
+@import "./variables/fonts.css";
+@import "./variables/sizes.css";
+@import "./variables/spacing.css";
+
+/* default variables */
 :root {
+  --link: inherit;
   --page-title-size: 3.815em;
-  --default-accent: #efe100;
-  --default-background--light: var(--color-white--001);
-  --default-background--dark: var(--color-black--001);
+  --default-accent: var(--color-blue--001);
+  --default-color-bg: var(--color-light--001);
+  --default-color-text: var(--color-dark--001);
   --border-size: 2px;
   --border-radius: 3px;
+  --top-bar-height: 54px;
   --toolbar-height: 49px;
-  --toolbars-height: calc(var(--toolbar-height) + 48px);
+  --toolbars-height: calc(var(--top-bar-height) + var(--toolbar-height));
 }

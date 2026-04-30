@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "font-family-name-quotes": "always-unless-keyword",
+    "import-notation": "string",
+    "comment-empty-line-before": null,
+    "selector-class-pattern": ["^[a-z]([a-z0-9-]+)?(__[a-z0-9]([a-z0-9-]+)?)?(--[a-z0-9]([a-z0-9-]+)?)?$", { "message": "Expected BEM class naming (block__element--modifier)" }],
+    "custom-property-pattern": ["^[a-z]([a-z0-9]+-)*[a-z0-9]+(--[a-z0-9]+([a-z0-9-]+)?)*$", { "message": "Expected kebab-case with optional double-dash suffix" }],
+    "media-feature-range-notation": null,
+    "alpha-value-notation": null
+  }
+}

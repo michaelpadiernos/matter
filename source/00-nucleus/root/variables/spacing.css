@@ -2,8 +2,21 @@
   --gutter: 2rem;
   --gap: 1.5rem;
   --gap-alt: 0.5em;
-  --spacing: 0.15em;
+  --space: 0.15em;
   --padding-block: 0.75rem;
   --padding-inline: 1rem;
   --padding-default: var(--padding-block) var(--padding-inline);
+  --spacing-3xs: clamp(.3125rem, .3125rem + 0vw, .3125rem);
+  --spacing-2xs: clamp(.5625rem, .5114rem + .2273vw, .6875rem);
+  --spacing-xs: clamp(.875rem, .8239rem + .2273vw, 1rem);
+  --spacing-s: clamp(1.125rem, 1.0483rem + .3409vw, 1.3125rem);
+  --spacing-m: clamp(1.6875rem, 1.5597rem + .5682vw, 2rem);
+  --spacing-l: clamp(2.25rem, 2.0966rem + .6818vw, 2.625rem);
+  --spacing-xl: clamp(3.375rem, 3.1449rem + 1.0227vw, 3.9375rem);
+  --spacing-2xl: clamp(4.5rem, 4.1932rem + 1.3636vw, 5.25rem);
+  --spacing-3xl: clamp(6.75rem, 6.2898rem + 2.0455vw, 7.875rem);
+  --spacing-4xl: clamp(9rem, 8.3864rem + 2.7273vw, 10.5rem);
+  --spacing-3xs-2xs: clamp(.3125rem, .1591rem + .6818vw, .6875rem);
+  --spacing-2xs-xs: clamp(.5625rem, .3835rem + .7955vw, 1rem);
+  --spacing-xs-s: clamp(.875rem, .696rem + .7955vw, 1.3125rem);
 }

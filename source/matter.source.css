@@ -2,16 +2,17 @@
 @import "./00-nucleus/core/fonts.core.css";
 
 /* Root */
-@import "./00-nucleus/root/globals.root.css";
 @import "./00-nucleus/root/grid.root.css";
+@import "./00-nucleus/root/globals.root.css";
 @import "./00-nucleus/root/variables.root.css";
 
 /* Defaults */
 @import "./00-nucleus/defaults.nucleus.css";
 
 /* Atomic design imports using postcss-import-ext-glob */
-@import-glob "./01-atoms/**/*.css";
-@import-glob "./02-molecules/**/*.css";
-@import-glob "./03-organisms/**/*.css";
-@import-glob "./04-symbiosis/**/*.css";
-@import-glob "./05-synergy/**/*.css";
+/* @import-glob "./01-atoms/" */
+/* @import-glob "./02-molecules/" */
+/* @import-glob "./03-organisms/" */
+/* @import-glob "./04-symbiosis/" */
+/* @import-glob "./05-synergy/" */
+
