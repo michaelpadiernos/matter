@@ -4,7 +4,7 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,7 +21,10 @@
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.1",
     "postcss-import-ext-glob": "^2.1.1",
-    "postcss-lightningcss": "^1.1.0"
+    "postcss-lightningcss": "^1.1.0",
+    "postcss-reporter": "^7.1.0",
+    "stylelint": "^17.9.1",
+    "stylelint-config-standard": "^40.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0"

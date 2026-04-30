@@ -1,0 +1,46 @@
+:is(.gin--core-navigation) {
+  .off-canvas {
+    block-size: calc(100dvb - var(--toolbars-height));
+    min-block-size: calc(100dvb - var(--toolbars-height));
+
+    @media screen and (width > 1023px) {
+      block-size: calc(100dvb - var(--top-bar-height));
+      min-block-size: calc(100dvb - var(--top-bar-height));
+    }
+  }
+}
+
+:is(.off-canvas) {
+  overflow: clip;
+
+  > * {
+    grid-column: page;
+  }
+
+  header {
+    grid-row: header;
+
+      @media (width < 1700px) {
+      grid-template-columns: auto 1fr auto;
+    }
+  }
+
+  main {
+    grid-row: main;
+
+    > * {
+      display: grid;
+      grid-column: content;
+      grid-template-columns: subgrid;
+
+      > * {
+        grid-column: content;
+      }
+    }
+  }
+
+  footer {
+    grid-row: footer;
+  }
+
+}

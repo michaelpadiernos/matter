@@ -1,147 +1,118 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
+@layer reset {
+  html {
+    interpolate-size: allow-keywords;
+    font-family: var(--font-stack--base, system-ui);
+    line-height: 1.6;
+    accent-color: var(--default-accent);
+    block-size: 100%;
+    text-size-adjust: none;
+    scroll-padding-block: 5lh;
 
-/* Remove default margin */
-* {
-  padding: 0;
-  margin: 0;
-  font: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-  font-size: 100%;
-  font-weight: 400;
-}
-
-p,
-li,
-figcaption {
-  text-wrap: pretty;
-  max-inline-size: max(65ch, 80ch);
-  font-size: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-li,
-figcaption,
-blockquote {
-  text-box: trim-both cap alphabetic;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-input,
-label {
-  line-height: 1;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-:is(ul, ol)[class] {
-  margin: 0;
-  padding: 0;
-}
-:is(ul, ol),
-:is(ul, old)[role="list"] {
-  margin-inline-start: 1.25em;
-}
-
-:target {
-  scroll-margin-block: 32px;
-  scroll-margin-block: 5rlh;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-html,
-body {
-  min-block-size: 100dvb;
-}
-
-html {
-  text-size-adjust: none;
-
-  /* font-size: 62.5%; */
-}
-
-body {
-  text-rendering: optimizespeed;
-  line-height: 1.5;
-
-  /* font-size: 1.6rem; */
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-inline-size: 100%;
-  display: block;
-}
-
-:is(blockquote)[class] {
-  margin-inline: 4em;
-  position: relative;
-  isolation: isolate;
-
-  &:before {
-    position: absolute;
-    font-family: "FontAwesome";
-    content: "\f10d";
-    inset-inline-start: -4.5%;
-    inset-block-start: 0;
-    color: rgb(0 0 0 / 0.2);
-    font-size: 2rem;
+    @media(prefers-reduced-motion:no-preference) {
+      scroll-behavior:smooth}
   }
 
-  > p {
-    font-size: 1.5rem;
-    margin-block: 1.5rem;
-    line-height: normal;
-  }
-}
-
-/* Inherit fonts for inputs and buttons */
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
+  body {
+    margin: 0;
+    min-block-size: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: var(--font-stack--base);
+    background: var(--default-color-bg);
+    color: var(--default-color-text);
+    font-size: var(--font-size-0);
+    line-height: 1.6
   }
 
-  *,
-  *:before,
-  *:after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin-block: 0
+  }
+
+  h1,
+  h2,
+  h3,h4 {
+    text-wrap: balance
+  }
+
+  h1,
+  h2 {
+    font-weight: 900
+  }
+
+  h1 {
+    font-size: var(--font-size-5);
+    font-weight: 900;
+    position: relative
+  }
+
+  h1+p,.hero h1~p {
+    font-size: var(--font-size-2)
+  }
+
+  .hero h1~p:last-of-type {
+    margin-block-end:var(--spacing-2xl)
+  }
+
+  h2 {
+    font-size: var(--font-size-3)
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1
+  }
+
+  img,
+  picture,
+  iframe {
+    max-inline-size: 100%;
+    display: block;
+    height: auto
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit
+  }
+
+  textarea {
+    min-block-size: 5lh
+  }
+
+  a:not([class]) {
+    color:var(--link);
+    text-underline-offset: .25ex;
+    text-decoration-thickness: 0;
+    transition: .2s ease-in-out;
+
+    &:hover,&:focus-visible {
+      text-decoration-color: var(--link);
+      text-decoration-thickness: .25ex;
+      text-underline-offset: .5ex;
+    }
+  }
+
+  ::selection {
+    background: hsl(from var(--default-accent) h s l / .5)
+  }
+
+  ::marker {
+    color: var(--default-accent)
   }
 }

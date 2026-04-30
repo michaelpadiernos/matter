@@ -8,16 +8,17 @@ process.emitWarning =
 
 import gulp, { src, dest, series, watch } from 'gulp'
 
-// gulp.js modules
 import gulp_postcss           from 'gulp-postcss'
 import gulp_rename            from 'gulp-rename'
 import gulp_uglify            from 'gulp-uglify'
 
-// postcss modules (only used ones)
-import postcss_cq             from 'cqfill'
+import postcss_cq             from 'cqfill/postcss'
 import postcss_import         from 'postcss-import'
 import postcss_imports        from 'postcss-import-ext-glob'
 import postcss_lightningcss   from 'postcss-lightningcss'
+import postcss_reporter       from 'postcss-reporter'
+
+import stylelint              from 'stylelint'
 
 const path = {
   styles: {
@@ -30,11 +31,16 @@ const path = {
   }
 }
 
-function styles() {
+function lint() {
+  return src('./source/**/*.css')
+    .pipe(gulp_postcss([
+      stylelint(),
+      postcss_reporter({ clearReportedMessages: true, throwError: true })
+    ]))
+}
 
-  // Optimized processor pipeline - Lightning CSS handles most transformations
+function styles() {
   const processors = [
-    // Modules without configuration - processed first
     postcss_cq,
     postcss_import,
     postcss_imports,
@@ -71,16 +77,14 @@ function scripts() {
     .pipe(dest(path.scripts.dest))
 }
 
-// Individual tasks
+gulp.task('lint', lint)
 gulp.task('styles', styles)
 gulp.task('scripts', scripts)
 
-// Build tasks (one-time execution)
-gulp.task('build', series(styles, scripts))
+gulp.task('build', series(lint, styles, scripts))
 
-// Watch tasks (continuous execution)
 gulp.task('watch-styles', () => {
-  return watch('./source/**/*.css', styles)
+  return watch('./source/**/*.css', series(lint, styles))
 })
 
 gulp.task('watch-scripts', () => {
@@ -88,9 +92,8 @@ gulp.task('watch-scripts', () => {
 })
 
 gulp.task('watch', () => {
-  watch('./source/**/*.css', styles)
+  watch('./source/**/*.css', series(lint, styles))
   watch('./source/**/*.js', scripts)
 })
 
-// Default task (build + watch)
 gulp.task('default', series('build', 'watch'))

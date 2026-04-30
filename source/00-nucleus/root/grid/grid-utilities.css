@@ -1,3 +1,61 @@
+/* Content width utilities */
+.grid-narrow {
+  grid-column: narrow;
+  max-inline-size: var(--narrow-max-width);
+}
+
+.grid-wrapper {
+  grid-column: wrapper;
+  max-inline-size: var(--wrapper-max-width).;
+}
+
+.grid-content {
+  grid-column: content;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.grid-full {
+  grid-column: page;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+/* Content sections */
+.content {
+  grid-column: content;
+  display: grid;
+  grid-template-columns: subgrid;
+  padding-block: var(--gutter);
+
+  > * {
+    grid-column: wrapper;
+  }
+}
+
+/* Hero sections */
+.hero {
+  grid-column: page;
+  display: grid;
+  grid-template-columns: subgrid;
+  min-block-size: clamp(20rem, 50vb, 40rem);
+  align-content: center;
+  text-align: center;
+
+  > * {
+    grid-column: wrapper;
+  }
+}
+
+/* Modifier overrides (higher specificity — must come after base > * rules) */
+.content.content-full > * {
+  grid-column: wrapper;
+}
+
+.hero.hero-narrow > * {
+  grid-column: narrow;
+}
+
 /* Grid layout children positioning */
 .grid-global {
   /* Default positioning for main layout elements */
@@ -41,63 +99,6 @@
     .hero.hero-full > * {
       grid-column: wrapper;
     }
-  }
-}
-
-/* Content width utilities */
-.grid-narrow {
-  grid-column: narrow;
-  max-inline-size: var(--narrow-max-width);
-}
-
-.grid-wrapper {
-  grid-column: wrapper;
-  max-inline-size: var(--wrapper-max-width).;
-}
-
-.grid-content {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-.grid-full {
-  grid-column: page;
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-/* Hero sections */
-.hero {
-  grid-column: page;
-  display: grid;
-  grid-template-columns: subgrid;
-  min-block-size: clamp(20rem, 50vb, 40rem);
-  align-content: center;
-  text-align: center;
-
-  > * {
-    grid-column: wrapper;
-  }
-
-  &.hero-narrow > * {
-    grid-column: narrow;
-  }
-}
-
-/* Content sections */
-.content {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: subgrid;
-  padding-block: var(--gutter);
-
-  > * {
-    grid-column: wrapper;
-  }
-
-  &.content-full > * {
-    grid-column: wrapper;
   }
 }
 

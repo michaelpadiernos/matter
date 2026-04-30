@@ -3,4 +3,12 @@
   --font-stack--mono: roboto mono, monospace, ui-monospace;
   --font-stack--slab: roboto slab, serif, ui-serif;
   --font-weight--bold: 700;
+  --font-size--2: clamp(.7387rem, .7987rem + -.0775vw, .7813rem);
+  --font-size--1: clamp(.9375rem, .9182rem + .0857vw, .9846rem);
+  --font-size-0: clamp(1.125rem, 1.0483rem + .3409vw, 1.3125rem);
+  --font-size-1: clamp(1.35rem, 1.1865rem + .7265vw, 1.7496rem);
+  --font-size-2: clamp(1.62rem, 1.3287rem + 1.2948vw, 2.3322rem);
+  --font-size-3: clamp(1.944rem, 1.4675rem + 2.1178vw, 3.1088rem);
+  --font-size-4: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
+  --font-size-5: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
 }

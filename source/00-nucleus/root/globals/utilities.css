@@ -5,10 +5,6 @@
 
 .grid {
   display: grid;
-
-  > * {
-    min-inline-size: 0;
-  }
 }
 
 .flex {
@@ -16,10 +12,6 @@
 
   display: flex;
   gap: var(--gutter);
-
-  > * {
-    min-inline-size: 0;
-  }
 }
 
 .grid,
