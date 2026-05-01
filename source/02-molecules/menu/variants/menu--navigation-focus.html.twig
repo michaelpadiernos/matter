@@ -12,20 +12,26 @@
     ]
   %}
 
+  {%
+    set nav_classes = [
+      'nav-link'
+    ]
+  %}
+
   {#
   We call a macro which calls itself to render the full tree.
   https://twig.symfony.com/doc/3.x/tags/macro.html
   #}
-  {{ menus.menu_links(items, attributes, classes, 0) }}
+  {{ menus.menu_links(items, attributes, classes, nav_classes, 0) }}
 
-  {% macro menu_links(items, attributes, classes, menu_level) %}
+  {% macro menu_links(items, attributes, classes, nav_classes, menu_level) %}
     {% import _self as menus %}
 
     <ul{{ attributes.addClass(classes) }}>
 
       {% for item in items %}
         <li{{ item.attributes }}>
-          {{ link(item.title, item.url) }}
+          {{ link(item.title, item.url)|add_class(nav_classes) }}
           {% if item.below %}
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
           {% endif %}

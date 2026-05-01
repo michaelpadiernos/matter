@@ -1,3 +1,8 @@
+:is(.page-navigation--menu-button),
+:is(.page-navigation--menu-icon) {
+  position: absolute;
+}
+
 :is(.page-navigation--focus) {
   margin-inline-start: auto;
   grid-column: page-end;
