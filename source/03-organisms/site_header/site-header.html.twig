@@ -1,6 +1,6 @@
 {% block header %}
 
-  <header role="banner" class="grid grid-wrapper--min site-header">
+  <header role="banner" class="grid site-header">
 
     {% if page.branding or page.navigation or page.focus or page.header %}
 
@@ -10,8 +10,8 @@
 
       {% block navigation %}
         {% if page.navigation or page.focus %}
-          <input class="page-navigation--menu-button" id="menu-button" type="checkbox" role="button" />
-          <label class="page-navigation--menu-icon" for="menu-button"><span class="menu-middle"></span></label>
+          <input class="page-navigation--menu-button" id="page-navigation--menu-button" type="checkbox" role="button" />
+          <label class="page-navigation--menu-icon" for="page-navigation--menu-button"><span class="page-navigation--menu-middle"></span></label>
           {% if page.navigation %}
             {% include '@molecules/page_navigation/page-navigation.html.twig' %}
           {% endif %}

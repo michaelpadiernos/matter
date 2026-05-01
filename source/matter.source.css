@@ -11,3 +11,5 @@
 
 /* Atomic design imports using postcss-import-ext-glob */
 @import-glob "./01-atoms/**/*.css";
+@import-glob "./02-molecules/**/*.css";
+@import-glob "./03-organisms/**/*.css";

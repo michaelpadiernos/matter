@@ -22,21 +22,36 @@
   overflow-inline: hidden;
 
   /* Content width constraints */
-  --inner-max-width: 100%;
+  --content-max-width: 85rem;
+  --wrapper-max-width: 75.75rem;
+  --narrow-max-width: 42.875rem;
+
+  /* Calculated sizes for responsive behavior */
+  --content-size: calc((var(--content-max-width) - var(--wrapper-max-width)) / 2);
+  --wrapper-size: calc((var(--wrapper-max-width) - var(--narrow-max-width)) / 2);
+  --content-min-size: calc((var(--content-size) + var(--wrapper-size)) / 2);
 
   /* Base grid setup with advanced layout as default */
   min-block-size: 100dvb;
   grid-template:
-      "header" auto
-      "main" 1fr
-      "footer" auto /
-      [page-start]
-        minmax(var(--gutter), 1fr)
-      [inner-start]
-        minmax(0, var(--inner-max-width))
-      [inner-end]
-        minmax(var(--gutter), 1fr)
-      [page-end];
+    "header" auto
+    "main" 1fr
+    "footer" auto /
+    [page-start]
+      minmax(var(--gutter), 1fr)
+    [content-start]
+      minmax(0, var(--content-size))
+    [wrapper-start]
+      minmax(0, var(--wrapper-size))
+    [narrow-start]
+      minmax(0, var(--narrow-max-width))
+    [narrow-end]
+      minmax(0, var(--wrapper-size))
+    [wrapper-end]
+      minmax(0, var(--content-size))
+    [content-end]
+      minmax(var(--gutter), 1fr)
+    [page-end];
 }
 
 .grid-wrapper--min,
@@ -46,6 +61,8 @@
 
   /* Calculated sizes for responsive behavior */
   --content-size: calc((var(--content-max-width) - var(--wrapper-max-width)) / 2);
+  --wrapper-size: calc((var(--wrapper-max-width) - var(--narrow-max-width)) / 2);
+  --content-min-size: calc((var(--content-size) + var(--wrapper-size)) / 2);
 }
 
 .grid-wrapper--min {
@@ -53,11 +70,7 @@
     [page-start]
       minmax(var(--gutter), 1fr)
     [content-start]
-      minmax(0, var(--content-size))
-    [wrapper-start]
-      minmax(0, var(--wrapper-max-width))
-    [wrapper-end]
-      minmax(0, var(--content-size))
+      minmax(0, var(--content-max-width))
     [content-end]
       minmax(var(--gutter), 1fr)
     [page-end];
@@ -65,10 +78,6 @@
 
 .grid-wrapper--max {
   --narrow-max-width: 42.875rem;
-
-
-  /* Calculated size for wrapper */
-  --wrapper-size: calc((var(--wrapper-max-width) - var(--narrow-max-width)) / 2);
 
   grid-template-columns:
     [page-start]

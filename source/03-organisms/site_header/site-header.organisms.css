@@ -1,0 +1,13 @@
+:is(.site-header) {
+  .page-navigation--menu-button,
+  .page-navigation--menu-icon {
+    display: block;
+  }
+
+  @media (--breakpoint-tablet) {
+    .page-navigation--menu-button,
+    .page-navigation--menu-icon {
+      display: none;
+    }
+  }
+}

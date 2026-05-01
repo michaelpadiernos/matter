@@ -16,6 +16,7 @@ import postcss_cq             from 'cqfill/postcss'
 import postcss_import         from 'postcss-import'
 import postcss_imports        from 'postcss-import-ext-glob'
 import postcss_lightningcss   from 'postcss-lightningcss'
+import postcss_media          from 'postcss-custom-media'
 import postcss_reporter       from 'postcss-reporter'
 
 import stylelint              from 'stylelint'
@@ -44,6 +45,7 @@ function styles() {
     postcss_cq,
     postcss_imports,
     postcss_import,
+    postcss_media(),
 
     postcss_lightningcss({
       browsers: 'last 2 versions, not dead',

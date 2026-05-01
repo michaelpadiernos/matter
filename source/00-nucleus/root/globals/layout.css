@@ -3,7 +3,7 @@
     block-size: calc(100dvb - var(--toolbars-height));
     min-block-size: calc(100dvb - var(--toolbars-height));
 
-    @media screen and (width > 1023px) {
+    @media (--breakpoint-desktop) {
       block-size: calc(100dvb - var(--top-bar-height));
       min-block-size: calc(100dvb - var(--top-bar-height));
     }
@@ -17,6 +17,12 @@
     grid-column: page;
   }
 
+  header,
+  main,
+  footer {
+    grid-template-columns: subgrid;
+  }
+
   header {
     grid-row: header;
 
@@ -25,7 +31,7 @@
       min-block-size: 100%;
     }
 
-    @media (width < 1700px) {
+    @media (width < 1885px) {
       grid-template-columns: auto 1fr auto;
     }
   }

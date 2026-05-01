@@ -1,0 +1,4 @@
+:is(.page-navigation--focus) {
+  margin-inline-start: auto;
+  grid-column: page-end;
+}
