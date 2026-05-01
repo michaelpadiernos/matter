@@ -42,29 +42,18 @@
  */
 #}
 
-<header role="banner" class="grid grid-wrapper--min">
-  {% if page.branding or page.navigation or page.header %}
-    {{ page.branding }}
-    {{ page.navigation }}
-    {{ page.header }}
-  {% endif %}
-</header>
+{% block page %}
 
-<main role="main" class="grid grid-wrapper--max">
-  <a id="main-content" tabindex="-1" class="visually-hidden"></a> {# link is in html.html.twig #}
+  {% block site_header %}
+    {% include '@organisms/site_header/site-header.html.twig' %}
+  {% endblock %}
 
-  {{ page.content }}
+  {% block site_main %}
+    {% include '@organisms/site_main/site-main.html.twig' %}
+  {% endblock %}
 
-  {% if page.sidebar %}
-    <aside class="layout-sidebar-first" role="complementary">
-      {{ page.sidebar }}
-    </aside>
-  {% endif %}
+  {% block site_footer %}
+    {% include '@organisms/site_footer/site-footer.html.twig' %}
+  {% endblock %}
 
-</main>
-
-<footer role="contentinfo" class="grid grid-wrapper--min">
-  {% if page.footer %}
-    {{ page.footer }}
-  {% endif %}
-</footer>
+{% endblock %}

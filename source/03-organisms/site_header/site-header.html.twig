@@ -1,0 +1,28 @@
+{% block header %}
+
+  <header role="banner" class="grid grid-wrapper--min site-header">
+
+    {% if page.branding or page.navigation or page.focus or page.header %}
+
+      {% block branding %}
+        {{ page.branding }}
+      {% endblock %}
+
+      {% block navigation %}
+        {% if page.navigation or page.focus %}
+          <input class="page-navigation--menu-button" id="menu-button" type="checkbox" role="button" />
+          <label class="page-navigation--menu-icon" for="menu-button"><span class="menu-middle"></span></label>
+          {% if page.navigation %}
+            {% include '@molecules/page_navigation/page-navigation.html.twig' %}
+          {% endif %}
+          {% if page.focus %}
+            {% include '@molecules/page_navigation/variants/page-navigation--focus.html.twig' %}
+          {% endif %}
+        {% endif %}
+      {% endblock %}
+
+    {% endif %}
+
+  </header>
+
+{% endblock %}

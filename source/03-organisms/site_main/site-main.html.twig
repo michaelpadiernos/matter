@@ -1,0 +1,16 @@
+{% block main %}
+
+  <main role="main" class="grid grid-wrapper--max">
+    <a id="main-content" tabindex="-1" class="visually-hidden"></a> {# link is in html.html.twig #}
+
+    {{ page.content }}
+
+    {% if page.sidebar %}
+      <aside class="main--aside" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+{% endblock %}

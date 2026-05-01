@@ -9,11 +9,12 @@ Matter is a component-based Drupal base theme built on [atomic design](https://a
 ## Requirements
 
 - [Drupal 11](https://www.drupal.org/about/drupal-11)           - Drupal core 11 or higher
-- [Components](https://www.drupal.org/project/components)       - Drupal module
-- [UI Icons](https://www.drupal.org/project/ui_icons)           - Drupal module
-- [UI Patterns](https://www.drupal.org/project/ui_patterns)     - Drupal module
-- [UI Skins](https://www.drupal.org/project/ui_skins)           - Drupal module
-- [UI Styles](https://www.drupal.org/project/ui_styles)         - Drupal module
+- [Components](https://www.drupal.org/project/components)       - Drupal module: maps source components to Twig templates
+- [More Global Variables](https://www.drupal.org/project/mgv)   - Drupal module: provides additional global variables for use in Twig templates
+- [UI Icons](https://www.drupal.org/project/ui_icons)           - Drupal module: integrates icon libraries
+- [UI Patterns](https://www.drupal.org/project/ui_patterns)     - Drupal module: provides reusable UI patterns
+- [UI Skins](https://www.drupal.org/project/ui_skins)           - Drupal module: allows for themeable UI skins
+- [UI Styles](https://www.drupal.org/project/ui_styles)         - Drupal module: manages global UI styles
 - [Node.js](https://nodejs.org)                                 - Node.js 14 or higher for asset compilation
 
 ## Structure
