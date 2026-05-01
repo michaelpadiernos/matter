@@ -23,6 +23,7 @@
     "postcss-import": "^16.1.1",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-lightningcss": "^1.1.0",
+    "postcss-nested": "^7.0.2",
     "postcss-reporter": "^7.1.0",
     "stylelint": "^17.9.1",
     "stylelint-config-standard": "^40.0.0"
