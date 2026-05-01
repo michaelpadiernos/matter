@@ -1,15 +1,3 @@
-:is(.gin--core-navigation) {
-  .off-canvas {
-    block-size: calc(100dvb - var(--toolbars-height));
-    min-block-size: calc(100dvb - var(--toolbars-height));
-
-    @media screen and (width > 1023px) {
-      block-size: calc(100dvb - var(--top-bar-height));
-      min-block-size: calc(100dvb - var(--top-bar-height));
-    }
-  }
-}
-
 :is(.off-canvas) {
   overflow: clip;
 
@@ -17,26 +5,25 @@
     grid-column: page;
   }
 
-  header {
-    grid-row: header;
-
-    :is(.block-system) {
-      align-items: center;
-      min-block-size: 100%;
-    }
-
-    @media (width < 1700px) {
-      grid-template-columns: auto 1fr auto;
-    }
-  }
-
-  main {
-    grid-row: main;
+  header,
+  main,
+  footer {
+    grid-template-columns: subgrid;
 
     > * {
       display: grid;
-      grid-column: content;
       grid-template-columns: subgrid;
+    }
+  }
+
+  main,
+  footer {
+    --padding-block: var(--space--gap);
+
+    padding-block: var(--padding-block);
+
+    > * {
+      grid-column: content;
 
       > * {
         grid-column: content;
@@ -44,8 +31,76 @@
     }
   }
 
-  footer {
-    grid-row: footer;
+  header {
+    grid-row: header;
+    grid-template-columns: 1fr;
+    grid-auto-rows: max-content;
+
+    > * {
+      min-block-size: var(--item-height);
+      grid-column: 1 / -1;
+    }
+
+    :is(.region) {
+      > * {
+        display: flex;
+        align-items: center;
+        min-block-size: 100%;
+      }
+
+      :is(.nav-link) {
+        display: grid;
+        place-items: center;
+        min-block-size: var(--item-height);
+      }
+    }
+
+    @media (width >= 768px) {
+      gap: var(--space--gap);
+      grid-template-columns: auto 1fr auto;
+
+      > * {
+        grid-column: auto;
+      }
+    }
+
+    @media (width >= 1885px) {
+      grid-template-columns: inherit;
+    }
   }
 
+  main {
+    grid-row: main;
+  }
+
+  footer {
+    grid-row: footer;
+
+    :is(.block-system) {
+      align-content: center;
+    }
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+:is(.permission_navigation) {
+  .off-canvas {
+    block-size: calc(100dvb - var(--toolbars-height));
+    min-block-size: calc(100dvb - var(--toolbars-height));
+
+    header {
+      min-block-size: calc(100dvb - var(--toolbars-height));
+    }
+
+    @media (--breakpoint-tablet) {
+      header {
+        min-block-size: var(--item-height);
+      }
+    }
+
+    @media (--breakpoint-desktop) {
+      block-size: calc(100dvb - var(--top-bar-height));
+      min-block-size: calc(100dvb - var(--top-bar-height));
+    }
+  }
 }

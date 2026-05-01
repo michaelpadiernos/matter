@@ -1,13 +1,13 @@
 :is(.off-canvas) {
   a {
-    color: var(--color-black--004);
+    color: var(--color-dark--004);
     text-decoration-style: dashed;
-    text-decoration-thickness: var(--spacing);
-    text-decoration-color: var(--color-black--004);
-    text-underline-offset: var(--spacing);
+    text-decoration-thickness: var(--space);
+    text-decoration-color: var(--color-dark--004);
+    text-underline-offset: var(--space);
 
     &:hover {
-      color: var(--color-black--001);
+      color: var(--color-dark--001);
     }
   }
 }

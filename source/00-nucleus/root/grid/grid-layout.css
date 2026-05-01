@@ -3,15 +3,19 @@
 .grid-wrapper--max {
   /* Layout variables - easier to customize */
   --gutter-mobile: 1.5rem;
-  --gutter-tablet: 2.5rem;
-  --gutter-desktop: 3.5rem;
+  --gutter-tablet: 2.75rem;
+  --gutter-desktop: 4rem;
+
+  /* Set the default gutter variable to mobile by default */
   --gutter: var(--gutter-mobile);
 
-  @media screen and (width > 786px) {
+  /* Update gutter variable for tablet breakpoint */
+  @media screen and (--breakpoint-tablet) {
     --gutter: var(--gutter-tablet);
   }
 
-  @media screen and (width > 1023px) {
+  /* Update gutter variable for desktop breakpoint */
+  @media screen and (--breakpoint-desktop) {
     --gutter: var(--gutter-desktop);
   }
 }
@@ -22,55 +26,23 @@
   overflow-inline: hidden;
 
   /* Content width constraints */
-  --inner-max-width: 100%;
-
-  /* Base grid setup with advanced layout as default */
-  min-block-size: 100dvb;
-  grid-template:
-      "header" auto
-      "main" 1fr
-      "footer" auto /
-      [page-start]
-        minmax(var(--gutter), 1fr)
-      [inner-start]
-        minmax(0, var(--inner-max-width))
-      [inner-end]
-        minmax(var(--gutter), 1fr)
-      [page-end];
-}
-
-.grid-wrapper--min,
-.grid-wrapper--max {
   --content-max-width: 85rem;
   --wrapper-max-width: 75.75rem;
+  --narrow-max-width: 42.875rem;
 
   /* Calculated sizes for responsive behavior */
   --content-size: calc((var(--content-max-width) - var(--wrapper-max-width)) / 2);
-}
-
-.grid-wrapper--min {
-  grid-template-columns:
-    [page-start]
-      minmax(var(--gutter), 1fr)
-    [content-start]
-      minmax(0, var(--content-size))
-    [wrapper-start]
-      minmax(0, var(--wrapper-max-width))
-    [wrapper-end]
-      minmax(0, var(--content-size))
-    [content-end]
-      minmax(var(--gutter), 1fr)
-    [page-end];
-}
-
-.grid-wrapper--max {
-  --narrow-max-width: 42.875rem;
-
-
-  /* Calculated size for wrapper */
   --wrapper-size: calc((var(--wrapper-max-width) - var(--narrow-max-width)) / 2);
+  --content-min-size: calc((var(--content-size) + var(--wrapper-size)) / 2);
 
-  grid-template-columns:
+  /* Base grid setup with advanced layout as default */
+  min-block-size: 100dvb;
+
+  /* Define the grid areas and columns for the overall page layout */
+  grid-template:
+    "header" auto
+    "main" 1fr
+    "footer" auto /
     [page-start]
       minmax(var(--gutter), 1fr)
     [content-start]

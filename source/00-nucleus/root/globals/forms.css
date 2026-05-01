@@ -1,51 +1,55 @@
-form,
-  .form-wrapper, {
-  > .form-item {
-    > * {
-      margin-block-end: var(--gap-alt);
-    }
+:is(.off-canvas) {
+  form {
+    gap: var(--space--gap);
+    grid-auto-rows: max-content;
   }
-}
 
-button,
-input,
-select,
-textarea {
-  margin: 0;
-  padding: var(--padding-default);
-  border: 2px solid var(--color-black--001);
-  border-radius: 0;
-  field-sizing: content;
-  font-family: inherit;
-  font-size: inherit;
-  background-color: var(--color-white--002);
-
-  &:focus,
-  &:focus-visible,
-  &:focus-within {
-    outline: 0;
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+    padding: var(--padding-default);
+    border: 2px solid var(--color-dark--001);
     border-radius: 0;
-  }
-}
+    field-sizing: content;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-light--002);
 
-button,
-input,
-select {
-  min-inline-size: 0;
-}
-
-input,
-textarea {
-  &:focus,
-  &:focus-visible,
-  &:focus-within {
-    &::placeholder {
-      color: transparent;
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      outline: 0;
+      border-radius: 0;
     }
   }
-}
 
-textarea {
-  min-inline-size: 100%;
-  min-block-size: 10rem;
+  button,
+  input,
+  select {
+    min-inline-size: 0;
+  }
+
+  input,
+  textarea {
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  textarea {
+    min-block-size: 10rem;
+  }
+
+  :is(.form-item) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space)
+  }
+
 }

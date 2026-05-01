@@ -1,0 +1,30 @@
+{% block header %}
+
+  <header role="banner" class="grid site-header">
+
+    {% if page.branding or page.navigation or page.focus or page.header %}
+
+      {% block branding %}
+        {{ page.branding }}
+      {% endblock %}
+
+      {% block navigation %}
+        {% if page.navigation or page.focus %}
+          <input class="page-navigation--menu-button" id="page-navigation--menu-button" type="checkbox" aria-controls="page-navigation--menu" />
+          <label class="page-navigation--menu-icon" for="page-navigation--menu-button" aria-label="Toggle navigation"><span class="page-navigation--menu-middle"></span></label>
+          <div id="page-navigation--menu">
+            {% if page.navigation %}
+              {% include '@molecules/page_navigation/page-navigation.html.twig' %}
+            {% endif %}
+            {% if page.focus %}
+              {% include '@molecules/page_navigation/variants/page-navigation--focus.html.twig' %}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endblock %}
+
+    {% endif %}
+
+  </header>
+
+{% endblock %}

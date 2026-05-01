@@ -8,10 +8,7 @@
 }
 
 .flex {
-  --gutter: 1.75rem;
-
   display: flex;
-  gap: var(--gutter);
 }
 
 .grid,

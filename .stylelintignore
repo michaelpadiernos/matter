@@ -1,1 +1,9 @@
 source/matter.source.css
+**/*.theme.css
+.vscode
+.idea
+.ddev
+assets
+node_modules
+dist
+build

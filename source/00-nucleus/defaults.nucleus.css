@@ -44,7 +44,7 @@ body {
     ol {
       &:not(.contextual-links, .entity-moderation-form, .format-filter-guidelines ul) {
         display: grid;
-        margin-inline-start: var(--gap);
+        margin-inline-start: var(--space--gap);
       }
     }
   }
@@ -53,7 +53,7 @@ body {
 .site-main {
   grid-area: main;
   grid-template-rows: auto 1fr;
-  padding-block-end: var(--gap);
+  padding-block-end: var(--space--gap);
 }
 
 .site-footer {

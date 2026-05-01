@@ -95,6 +95,17 @@
     min-block-size: 5lh
   }
 
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  :is(ul, ol)[class]:not(.links) {
+    margin: 0;
+    padding: 0;
+  }
+
+  :is(ul, ol):not(.links),
+  :is(ul, ol)[role="list"] {
+    margin-inline-start: 1.25em;
+  }
+
   a:not([class]) {
     color:var(--link);
     text-underline-offset: .25ex;

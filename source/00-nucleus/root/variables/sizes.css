@@ -1,5 +1,6 @@
 :root {
   --height: max(1.5rem, 4rem);
+  --item-height: 4rem;
 
   /* Page Title Sizes */
   --page-title-size: clamp(2rem, 5vi, 3.5rem);
