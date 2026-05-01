@@ -1,9 +1,9 @@
 :root {
   /* Spacing */
-  --space: 0.15em;
   --gutter: 2rem;
-  --gap: 1.5rem;
-  --gap-alt: 0.5em;
+  --space: 0.15em;
+  --space--gap: 1.5rem;
+  --space--gap-alt: 0.75em;
 
   /* Padding */
   --padding-block: 0.75rem;

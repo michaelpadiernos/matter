@@ -8,14 +8,23 @@ Matter is a component-based Drupal base theme built on [atomic design](https://a
 
 ## Requirements
 
-- [Drupal 11](https://www.drupal.org/about/drupal-11)           - Drupal core 11 or higher
-- [Components](https://www.drupal.org/project/components)       - Drupal module: maps source components to Twig templates
-- [More Global Variables](https://www.drupal.org/project/mgv)   - Drupal module: provides additional global variables for use in Twig templates
-- [UI Icons](https://www.drupal.org/project/ui_icons)           - Drupal module: integrates icon libraries
-- [UI Patterns](https://www.drupal.org/project/ui_patterns)     - Drupal module: provides reusable UI patterns
-- [UI Skins](https://www.drupal.org/project/ui_skins)           - Drupal module: allows for themeable UI skins
-- [UI Styles](https://www.drupal.org/project/ui_styles)         - Drupal module: manages global UI styles
-- [Node.js](https://nodejs.org)                                 - Node.js 14 or higher for asset compilation
+### Drupal
+- [Drupal 11](https://www.drupal.org/about/drupal-11)                 - Drupal core 11 or higher
+- [Components](https://www.drupal.org/project/components)             - Drupal module: maps source components to Twig templates
+- [More Global Variables](https://www.drupal.org/project/mgv)         - Drupal module: provides additional global variables for use in Twig templates
+- [Roles Classes](https://www.drupal.org/project/body_roles_classes)  - Drupal modules: adds role-based classes to the body element
+- [UI Icons](https://www.drupal.org/project/ui_icons)                 - Drupal module: integrates icon libraries
+- [UI Patterns](https://www.drupal.org/project/ui_patterns)           - Drupal module: provides reusable UI patterns
+- [UI Skins](https://www.drupal.org/project/ui_skins)                 - Drupal module: allows for themeable UI skins
+- [UI Styles](https://www.drupal.org/project/ui_styles)               - Drupal module: manages global UI styles
+
+### Development
+- [Apache](https://httpd.apache.org/)                                 - Apache 2.4 or higher for local development server
+- [PHP](https://www.php.net)                                          - PHP 8.0 or higher for Drupal and Composer (PHP 8.4 recommended)
+- [Composer](https://getcomposer.org)                                 - Composer 2 or higher for managing Drupal dependencies
+- [Node.js](https://nodejs.org)                                       - Node.js 14 or higher for asset compilation
+- [Gulp](https://gulpjs.com/)                                         - Gulp 4 for automating asset pipeline tasks
+- [PostCSS](https://postcss.org/)                                     - PostCSS 8 for processing CSS with plugins (import resolution, polyfills, minification)
 
 ## Structure
 

@@ -1,6 +1,6 @@
 :is(.off-canvas) {
   form {
-    gap: 1.5rem;
+    gap: var(--space--gap);
     grid-auto-rows: max-content;
   }
 
@@ -49,6 +49,7 @@
   :is(.form-item) {
     display: flex;
     flex-direction: column;
+    gap: var(--space)
   }
 
 }

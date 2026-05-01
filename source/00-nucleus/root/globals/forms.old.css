@@ -2,7 +2,7 @@ form,
   .form-wrapper, {
   > .form-item {
     > * {
-      margin-block-end: var(--gap-alt);
+      margin-block-end: var(--space--gap-alt);
     }
   }
 }

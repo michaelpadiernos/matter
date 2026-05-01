@@ -29,13 +29,12 @@
     }
   }
 
-  header,
-  footer {
-    min-block-size: var(--item-height);
-  }
-
   main,
   footer {
+    --padding-block: var(--space--gap);
+
+    padding-block: var(--padding-block);
+
     > * {
       grid-column: content;
 
@@ -46,8 +45,9 @@
   }
 
   header {
+    min-block-size: var(--item-height);
     grid-row: header;
-    gap: var(--gap);
+    gap: var(--space--gap);
 
     :is(.region) {
       > * {

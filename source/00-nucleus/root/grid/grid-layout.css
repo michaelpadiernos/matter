@@ -3,8 +3,8 @@
 .grid-wrapper--max {
   /* Layout variables - easier to customize */
   --gutter-mobile: 1.5rem;
-  --gutter-tablet: 2.5rem;
-  --gutter-desktop: 3.5rem;
+  --gutter-tablet: 2.75rem;
+  --gutter-desktop: 4rem;
 
   /* Set the default gutter variable to mobile by default */
   --gutter: var(--gutter-mobile);
