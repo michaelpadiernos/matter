@@ -1,46 +1,54 @@
-button,
-input,
-select,
-textarea {
-  margin: 0;
-  padding: var(--padding-default);
-  border: 2px solid var(--color-dark--001);
-  border-radius: 0;
-  field-sizing: content;
-  font-family: inherit;
-  font-size: inherit;
-  background-color: var(--color-light--002);
-
-  &:focus,
-  &:focus-visible,
-  &:focus-within {
-    outline: 0;
-    border-radius: 0;
+:is(.off-canvas) {
+  form {
+    gap: 1.5rem;
+    grid-auto-rows: max-content;
   }
-}
 
-button,
-input,
-select {
-  min-inline-size: 0;
-}
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+    padding: var(--padding-default);
+    border: 2px solid var(--color-dark--001);
+    border-radius: 0;
+    field-sizing: content;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-light--002);
 
-input,
-textarea {
-  &:focus,
-  &:focus-visible,
-  &:focus-within {
-    &::placeholder {
-      color: transparent;
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      outline: 0;
+      border-radius: 0;
     }
   }
-}
 
-textarea {
-  min-block-size: 10rem;
-}
+  button,
+  input,
+  select {
+    min-inline-size: 0;
+  }
 
-:is(.form-item) {
-  display: flex;
-  flex-direction: column;
+  input,
+  textarea {
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  textarea {
+    min-block-size: 10rem;
+  }
+
+  :is(.form-item) {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
