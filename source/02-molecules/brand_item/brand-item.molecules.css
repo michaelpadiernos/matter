@@ -1,5 +1,5 @@
 .brand-item__logo {
   img {
-    max-block-size: var(--height);
+    max-block-size: var(--item-height);
   }
 }

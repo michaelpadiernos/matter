@@ -2,12 +2,12 @@
 @import "./00-nucleus/core/fonts.core.css";
 
 /* Root */
+@import "./00-nucleus/root/variables.root.css";
 @import "./00-nucleus/root/grid.root.css";
 @import "./00-nucleus/root/globals.root.css";
-@import "./00-nucleus/root/variables.root.css";
 
 /* Defaults */
-@import "./00-nucleus/defaults.nucleus.css";
+/* @import "./00-nucleus/defaults.nucleus.css"; */
 
 /* Atomic design imports using postcss-import-ext-glob */
 @import-glob "./01-atoms/**/*.css";
