@@ -10,14 +10,18 @@
 
       {% block navigation %}
         {% if page.navigation or page.focus %}
-          <input class="page-navigation--menu-button" id="page-navigation--menu-button" type="checkbox" role="button" />
-          <label class="page-navigation--menu-icon" for="page-navigation--menu-button"><span class="page-navigation--menu-middle"></span></label>
-          {% if page.navigation %}
-            {% include '@molecules/page_navigation/page-navigation.html.twig' %}
-          {% endif %}
-          {% if page.focus %}
-            {% include '@molecules/page_navigation/variants/page-navigation--focus.html.twig' %}
-          {% endif %}
+          <input class="page-navigation--menu-button" id="page-navigation--menu-button" type="checkbox" aria-hidden="true" tabindex="-1" />
+          <label class="page-navigation--menu-icon" for="page-navigation--menu-button" role="button" aria-controls="page-navigation" aria-label="{{ 'Toggle navigation'|t }}">
+            <span class="page-navigation--menu-middle" aria-hidden="true"></span>
+          </label>
+          <div class="page-navigation">
+            {% if page.navigation %}
+              {% include '@molecules/page_navigation/page-navigation.html.twig' %}
+            {% endif %}
+            {% if page.focus %}
+              {% include '@molecules/page_navigation/variants/page-navigation--focus.html.twig' %}
+            {% endif %}
+          </div>
         {% endif %}
       {% endblock %}
 
