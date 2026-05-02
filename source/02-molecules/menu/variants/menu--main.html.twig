@@ -48,7 +48,7 @@
           {{ link(item.title, item.url)|add_class(nav_classes) }}
           {% if item.below %}
 
-            {{ menus.menu_links(item.below, attributes, classes, menu_level + 1) }}
+            {{ menus.menu_links(item.below, attributes, classes, menu_classes, nav_classes, menu_level + 1) }}
           {% endif %}
         </li>
 

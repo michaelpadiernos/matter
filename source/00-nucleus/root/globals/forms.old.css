@@ -1,5 +1,5 @@
 form,
-  .form-wrapper, {
+  .form-wrapper {
   > .form-item {
     > * {
       margin-block-end: var(--space--gap-alt);
