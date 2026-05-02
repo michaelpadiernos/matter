@@ -14,7 +14,7 @@
           <label class="page-navigation--menu-icon" for="page-navigation--menu-button" role="button" aria-controls="page-navigation" aria-label="{{ 'Toggle navigation'|t }}">
             <span class="page-navigation--menu-middle" aria-hidden="true"></span>
           </label>
-          <div class="page-navigation">
+          <div class="page-navigation navigation" id="page-navigation">
             {% if page.navigation %}
               {% include '@molecules/page_navigation/page-navigation.html.twig' %}
             {% endif %}

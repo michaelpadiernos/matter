@@ -56,15 +56,20 @@
     }
 
     @media (width >= 768px) {
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr;
 
       > * {
         grid-column: auto;
       }
     }
 
+
     @media (width >= 1885px) {
-      grid-template-columns: inherit;
+      grid-template-columns: subgrid;
+
+      :is(.navigation) {
+        grid-column: 2 / -1;
+      }
     }
   }
 

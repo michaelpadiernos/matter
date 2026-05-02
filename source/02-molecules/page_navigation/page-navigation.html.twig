@@ -1,3 +1,8 @@
 {% block page_navigation %}
-  {{ page.navigation|add_class('page-navigation') }}
+  {%
+    set classes = [
+      'page-navigation--main',
+    ]
+  %}
+  {{ page.navigation|add_class(classes) }}
 {% endblock %}

@@ -11,6 +11,10 @@
     max-inline-size: fit-content;
     grid-auto-flow: column;
   }
+
+  @media (width >= 1885px) {
+    grid-column: content-start / page-end;
+  }
 }
 
 :is(.page-navigation--menu-button),
