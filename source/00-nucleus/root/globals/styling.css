@@ -10,4 +10,12 @@
       color: var(--color-dark--001);
     }
   }
+
+  header,
+  footer {
+    :is(a, .nav-link):not(.brand-item__logo, .brand-item__name, .brand-item__slogan) {
+      text-transform: lowercase;
+      padding-inline: var(--space--gap);
+    }
+  }
 }
