@@ -7,3 +7,7 @@ package-lock.json
 # Ignore IDE and Editor files
 .vscode/
 .idea/
+
+# Ignore .temp & .cache folders
+.cache/
+.temp/
