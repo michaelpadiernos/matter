@@ -12,7 +12,7 @@ Matter is a component-based Drupal base theme built on [atomic design](https://a
 - [Drupal 11](https://www.drupal.org/about/drupal-11)                 - Drupal core 11 or higher
 - [Components](https://www.drupal.org/project/components)             - Drupal module: maps source components to Twig templates
 - [More Global Variables](https://www.drupal.org/project/mgv)         - Drupal module: provides additional global variables for use in Twig templates
-- [Roles Classes](https://www.drupal.org/project/body_roles_classes)  - Drupal module: adds role-based classes to the body element
+- [Roles Classes](https://www.drupal.org/project/body_roles_classes)  - Drupal modules: adds role-based classes to the body element
 - [UI Icons](https://www.drupal.org/project/ui_icons)                 - Drupal module: integrates icon libraries
 - [UI Patterns](https://www.drupal.org/project/ui_patterns)           - Drupal module: provides reusable UI patterns
 - [UI Skins](https://www.drupal.org/project/ui_skins)                 - Drupal module: allows for themeable UI skins
@@ -28,17 +28,21 @@ Matter is a component-based Drupal base theme built on [atomic design](https://a
 
 ## Structure
 
+- [assets/](assets/README.md) — Browser-ready files served to the front end
+- [components/](components/README.md) — Drupal SDC definitions that map source components to Twig
+- [source/](source/README.md) — Authored source — CSS, JS, and Twig templates
+
 ```
 matter/
-├── assets/                  # Browser-ready files served to the front end
+├── assets/
 │   ├── css/                 # Compiled and minified theme stylesheet
 │   ├── js/                  # Compiled and minified theme scripts
 │   └── images/              # Theme images and icon libraries
-├── components/              # Drupal SDC definitions that map source components to Twig
+├── components/
 │   ├── 01-atoms/            # SDC wiring for atom-level components
 │   ├── 02-molecules/        # SDC wiring for molecule-level components
 │   └── 03-organisms/        # SDC wiring for organism-level components
-└── source/                  # Authored source — CSS, JS, and Twig templates
+└── source/
     ├── 00-nucleus/          # Design tokens, custom properties, typography, and reset styles
     ├── 01-atoms/            # Foundational UI elements: buttons, inputs, images
     ├── 02-molecules/        # Composite patterns assembled from atoms
