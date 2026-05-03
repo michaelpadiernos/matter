@@ -1,0 +1,5 @@
+article:has(p) {
+   > p:not(:last-child) {
+    margin-block-end: var(--space--gap);
+  }
+}

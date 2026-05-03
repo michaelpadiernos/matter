@@ -3,3 +3,7 @@
     max-block-size: var(--item-height);
   }
 }
+
+.brand-item__name {
+  padding-inline: var(--space--gap);
+}

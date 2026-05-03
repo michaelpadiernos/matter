@@ -1,0 +1,13 @@
+{% extends '@organisms/node_item/node-item.html.twig' %}
+
+{% block node_item %}
+
+  {% if node_title %}
+    {% block node_title %}
+      {% include '@organisms/node_item/variants/node-item--title.html.twig' %}
+    {% endblock node_title %}
+  {% endif %}
+
+  {{ content|without('links', 'field_image') }}
+
+{% endblock %}

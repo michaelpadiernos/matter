@@ -7,3 +7,4 @@
 @import-glob "./01-atoms/**/*.css";
 @import-glob "./02-molecules/**/*.css";
 @import-glob "./03-organisms/**/*.css";
+@import-glob "./04-symbiosis/**/*.css";

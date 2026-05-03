@@ -1,0 +1,17 @@
+{% extends '@organisms/node_item/node-item.html.twig' %}
+
+{% block node_item %}
+
+  {{ title_prefix }}
+
+  {% if not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">
+        {% include '@atoms/label/variants/label--title.html.twig' %}
+      </a>
+    </h2>
+  {% endif %}
+
+  {{ title_suffix }}
+
+{% endblock %}
