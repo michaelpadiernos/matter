@@ -75,6 +75,11 @@
 
   main {
     grid-row: main;
+    grid-template-rows: min-content;
+
+    > .hero {
+      grid-column: page;
+    }
   }
 
   footer {

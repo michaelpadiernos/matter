@@ -46,8 +46,11 @@
 }
 
 .hero {
+  --padding-block: var(--space--gap);
+
+  padding-block: var(--padding-block);
   background-color: white;
-  min-block-size: max(5rem, 30rem);
+  min-block-size: fit-content;
   align-content: center;
   gap: 0;
 }

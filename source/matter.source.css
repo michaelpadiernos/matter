@@ -1,6 +1,3 @@
-/* Core */
-@import "./00-nucleus/core/fonts.core.css";
-
 /* Root */
 @import "./00-nucleus/root/variables.root.css";
 @import "./00-nucleus/root/grid.root.css";
