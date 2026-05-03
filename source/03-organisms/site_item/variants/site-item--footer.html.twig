@@ -1,7 +1,11 @@
-{% block footer %}
+{% extends '@organisms/site_item/site-item.html.twig' %}
+
+{% block site_item %}
+
   <footer role="contentinfo" class="grid site-footer">
     {% if page.footer %}
       {{ page.footer }}
     {% endif %}
   </footer>
+
 {% endblock %}

@@ -5,7 +5,7 @@ node_modules/
 package-lock.json
 
 # Ignore IDE and Editor files
-.vscode/
+# .vscode/
 .idea/
 
 # Ignore .temp & .cache folders

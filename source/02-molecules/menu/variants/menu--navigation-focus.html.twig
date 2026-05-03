@@ -2,13 +2,22 @@
 
 {% block menu_list %}
 
-    {% import _self as menus %}
+  {% import _self as menus %}
 
   {%
     set classes = [
       'navigation-focus',
       'no-bullets',
       'grid'
+    ]
+  %}
+
+  {%
+    set menu_classes = [
+      'menu-item',
+      item.is_expanded ? 'menu-item--expanded',
+      item.is_collapsed ? 'menu-item--collapsed',
+      item.in_active_trail ? 'menu-item--active-trail',
     ]
   %}
 
@@ -22,25 +31,31 @@
   We call a macro which calls itself to render the full tree.
   https://twig.symfony.com/doc/3.x/tags/macro.html
   #}
-  {{ menus.menu_links(items, attributes, classes, nav_classes, 0) }}
+  {{ menus.menu_links(items, attributes, classes, menu_classes, nav_classes, 0) }}
 
-  {% macro menu_links(items, attributes, classes, nav_classes, menu_level) %}
+  {% macro menu_links(items, attributes, classes, menu_classes, nav_classes, menu_level) %}
+    {% set primary_nav_level = 'menu--level-' ~ (menu_level + 1) %}
     {% import _self as menus %}
-
-    <ul{{ attributes.addClass(classes) }}>
-
+    {% if items %}
+      {% if menu_level == 0 %}
+        <ul{{ attributes.addClass(classes, 'menu', primary_nav_level ) }}>
+      {% else %}
+        <ul class="menu {{ primary_nav_level }}">
+      {% endif %}
       {% for item in items %}
-        <li{{ item.attributes }}>
+
+        <li{{ item.attributes.addClass(menu_classes) }}>
           {{ link(item.title, item.url)|add_class(nav_classes) }}
           {% if item.below %}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+
+            {{ menus.menu_links(item.below, attributes, classes, menu_classes, nav_classes, menu_level + 1) }}
           {% endif %}
         </li>
+
       {% endfor %}
 
-    </ul>
-
+      </ul>
+    {% endif %}
   {% endmacro %}
 
 {% endblock %}
-

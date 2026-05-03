@@ -1,5 +1,4 @@
 .brand {
   align-items: center;
   min-block-size: 100%;
-  gap: var(--space--gap-alt);
 }

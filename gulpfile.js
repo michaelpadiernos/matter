@@ -13,6 +13,7 @@ import gulp_rename            from 'gulp-rename'
 import gulp_uglify            from 'gulp-uglify'
 
 import postcss_cq             from 'cqfill/postcss'
+import postcss_font           from 'postcss-font-magician'
 import postcss_import         from 'postcss-import'
 import postcss_imports        from 'postcss-import-ext-glob'
 import postcss_lightningcss   from 'postcss-lightningcss'
@@ -41,9 +42,65 @@ function lint() {
     ]))
 }
 
+function postcss_fonts() {
+  return postcss_font({
+    custom: {
+      'Roboto': {
+        variants: {
+          normal: {
+            100: { url: { ttf: '../fonts/roboto/regular/Roboto-Thin.ttf' } },
+            300: { url: { ttf: '../fonts/roboto/regular/Roboto-Light.ttf' } },
+            400: { url: { ttf: '../fonts/roboto/regular/Roboto-Regular.ttf' } },
+            500: { url: { ttf: '../fonts/roboto/regular/Roboto-Medium.ttf' } },
+            700: { url: { ttf: '../fonts/roboto/regular/Roboto-Bold.ttf' } },
+            900: { url: { ttf: '../fonts/roboto/regular/Roboto-Black.ttf' } },
+          },
+          italic: {
+            100: { url: { ttf: '../fonts/roboto/regular/Roboto-ThinItalic.ttf' } },
+            300: { url: { ttf: '../fonts/roboto/regular/Roboto-LightItalic.ttf' } },
+            400: { url: { ttf: '../fonts/roboto/regular/Roboto-Italic.ttf' } },
+            500: { url: { ttf: '../fonts/roboto/regular/Roboto-MediumItalic.ttf' } },
+            700: { url: { ttf: '../fonts/roboto/regular/Roboto-BoldItalic.ttf' } },
+            900: { url: { ttf: '../fonts/roboto/regular/Roboto-BlackItalic.ttf' } },
+          },
+        },
+      },
+      'Roboto Mono': {
+        variants: {
+          normal: {
+            100: { url: { ttf: '../fonts/roboto/mono/RobotoMono-Thin.ttf' } },
+            300: { url: { ttf: '../fonts/roboto/mono/RobotoMono-Light.ttf' } },
+            400: { url: { ttf: '../fonts/roboto/mono/RobotoMono-Regular.ttf' } },
+            500: { url: { ttf: '../fonts/roboto/mono/RobotoMono-Medium.ttf' } },
+            700: { url: { ttf: '../fonts/roboto/mono/RobotoMono-Bold.ttf' } },
+          },
+          italic: {
+            100: { url: { ttf: '../fonts/roboto/mono/RobotoMono-ThinItalic.ttf' } },
+            300: { url: { ttf: '../fonts/roboto/mono/RobotoMono-LightItalic.ttf' } },
+            400: { url: { ttf: '../fonts/roboto/mono/RobotoMono-Italic.ttf' } },
+            500: { url: { ttf: '../fonts/roboto/mono/RobotoMono-MediumItalic.ttf' } },
+            700: { url: { ttf: '../fonts/roboto/mono/RobotoMono-BoldItalic.ttf' } },
+          },
+        },
+      },
+      'Roboto Slab': {
+        variants: {
+          normal: {
+            100: { url: { ttf: '../fonts/roboto/slab/RobotoSlab-Thin.ttf' } },
+            300: { url: { ttf: '../fonts/roboto/slab/RobotoSlab-Light.ttf' } },
+            400: { url: { ttf: '../fonts/roboto/slab/RobotoSlab-Regular.ttf' } },
+            700: { url: { ttf: '../fonts/roboto/slab/RobotoSlab-Bold.ttf' } },
+          },
+        },
+      },
+    },
+  })
+}
+
 function styles() {
   const processors = [
     postcss_cq,
+    postcss_fonts(),
     postcss_imports,
     postcss_import,
     postcss_media(),

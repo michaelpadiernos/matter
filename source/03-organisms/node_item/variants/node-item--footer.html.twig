@@ -1,0 +1,16 @@
+{% extends '@organisms/node_item/node-item.html.twig' %}
+
+{% block node_item %}
+
+  {% if display_submitted %}
+    <footer class="content-footer">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('submitted') }}>
+        {% trans %}{{ author_name }} | <span class="date">{{ date }}</span> {% endtrans %}
+        {{ metadata }}
+      </div>
+      {{ content.links }}
+    </footer>
+  {% endif %}
+
+{% endblock %}

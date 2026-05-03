@@ -1,6 +1,3 @@
-/* Core */
-@import "./00-nucleus/core/fonts.core.css";
-
 /* Root */
 @import "./00-nucleus/root/variables.root.css";
 @import "./00-nucleus/root/grid.root.css";
@@ -10,3 +7,4 @@
 @import-glob "./01-atoms/**/*.css";
 @import-glob "./02-molecules/**/*.css";
 @import-glob "./03-organisms/**/*.css";
+@import-glob "./04-symbiosis/**/*.css";
