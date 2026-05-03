@@ -1,0 +1,27 @@
+{% extends '@organisms/site_item/site-item.html.twig' %}
+
+{% block site_item %}
+
+  <main role="main" class="grid site-main">
+    <a id="main-content" tabindex="-1" class="visually-hidden"></a> {# link is in html.html.twig #}
+
+    {% if page.hero %}
+      {% include '@molecules/content/variants/content-hero.html.twig' %}
+    {% endif %}
+
+    {% if page.highlight %}
+      {% include '@molecules/content/variants/content-highlight.html.twig' %}
+    {% endif %}
+
+    <section id="site-content" class="site-content content {% if page.sidebar %}content-sidebar{% endif %}">
+
+      {% include '@molecules/content/content.html.twig' %}
+
+      {% if page.sidebar %}
+        {% include '@molecules/content/variants/content-sidebar.html.twig' %}
+      {% endif %}
+
+    </section>
+  </main>
+
+{% endblock %}

@@ -44,16 +44,10 @@
 
 {% block page %}
 
-  {% block site_header %}
-    {% include '@organisms/site_header/site-header.html.twig' %}
-  {% endblock %}
+  {% include '@organisms/site_item/variants/site-item--header.html.twig' %}
 
-  {% block site_main %}
-    {% include '@organisms/site_main/site-main.html.twig' %}
-  {% endblock %}
+  {% include '@organisms/site_item/variants/site-item--main.html.twig' %}
 
-  {% block site_footer %}
-    {% include '@organisms/site_footer/site-footer.html.twig' %}
-  {% endblock %}
+  {% include '@organisms/site_item/variants/site-item--footer.html.twig' %}
 
 {% endblock %}

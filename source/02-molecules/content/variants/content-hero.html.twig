@@ -1,0 +1,13 @@
+{% extends '@molecules/content/content.html.twig' %}
+
+{% block content %}
+
+    {% if page.hero %}
+
+    <figure role="banner" id="hero" class="site-hero hero{% if page['#title'] %} with-title{% endif %}">
+      {{ page.hero }}
+    </figure>
+
+  {% endif %}
+
+{% endblock %}
