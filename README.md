@@ -77,7 +77,7 @@ The scripts pipeline processes `source/matter.source.js` through UglifyJS (minif
 |--------------|------------|----------------------------------------------------------------------------------|
 | `branding`   | Branding   | Site logo, name, and slogan                                                      |
 | `navigation` | Navigation | Primary site navigation menus                                                    |
-| `focus`      | Focus      | Skip-link and accessibility-focused elements                                     |
+| `focus`      | Focus      | Navigation region for focused items                                     |
 | `hero`       | Hero       | Full-width introductory or promotional content                                   |
 | `highlight`  | Highlight  | Prominent callout content above the main area                                    |
 | `content`    | Content    | Main page content                                                                |
