@@ -8,7 +8,6 @@ libraries:
   - matter/global-styling
 
 dependencies:
-  - body_roles_classes:body_roles_classes
   - components:components
   - ui_icons:ui_icons
   - ui_patterns:ui_patterns
