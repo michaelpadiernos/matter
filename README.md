@@ -11,8 +11,6 @@ Matter is a component-based Drupal base theme built on [atomic design](https://a
 ### Drupal
 - [Drupal 11](https://www.drupal.org/about/drupal-11)                 - Drupal core 11 or higher
 - [Components](https://www.drupal.org/project/components)             - Drupal module: maps source components to Twig templates
-- [More Global Variables](https://www.drupal.org/project/mgv)         - Drupal module: provides additional global variables for use in Twig templates
-- [Roles Classes](https://www.drupal.org/project/body_roles_classes)  - Drupal modules: adds role-based classes to the body element
 - [UI Icons](https://www.drupal.org/project/ui_icons)                 - Drupal module: integrates icon libraries
 - [UI Patterns](https://www.drupal.org/project/ui_patterns)           - Drupal module: provides reusable UI patterns
 - [UI Skins](https://www.drupal.org/project/ui_skins)                 - Drupal module: allows for themeable UI skins
@@ -77,7 +75,7 @@ The scripts pipeline processes `source/matter.source.js` through UglifyJS (minif
 |--------------|------------|----------------------------------------------------------------------------------|
 | `branding`   | Branding   | Site logo, name, and slogan                                                      |
 | `navigation` | Navigation | Primary site navigation menus                                                    |
-| `focus`      | Focus      | Skip-link and accessibility-focused elements                                     |
+| `focus`      | Focus      | Navigation region for focused items                                     |
 | `hero`       | Hero       | Full-width introductory or promotional content                                   |
 | `highlight`  | Highlight  | Prominent callout content above the main area                                    |
 | `content`    | Content    | Main page content                                                                |

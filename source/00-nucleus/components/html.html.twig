@@ -8,13 +8,14 @@
 #}
 {%
   set body_classes = [
+    db_offline ? 'db-offline',
     logged_in ? 'user-logged-in',
     not root_path ? 'page-front' : 'page-' ~ root_path|clean_class,
     node_type ? 'page-' ~ node_type|clean_class,
     node_status ? 'page-node-status-' ~ node_status|clean_class,
-    db_offline ? 'db-offline'
-  ]
+  ]|merge(user.roles|map(role => role|clean_class))
 %}
+
 <!DOCTYPE html>
 <html{{ html_attributes }}>
   <head>
