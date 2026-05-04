@@ -1,164 +1,44 @@
 /* Content width utilities */
+.grid-narrow,
+.grid-wrapper,
+.grid-content,
+.grid-full {
+  grid-template-columns: subgrid;
+}
+
 .grid-narrow {
   grid-column: narrow;
   max-inline-size: var(--narrow-max-width);
+
+  > * {
+    grid-column: narrow
+  }
 }
 
 .grid-wrapper {
   grid-column: wrapper;
-  max-inline-size: var(--wrapper-max-width).;
+  max-inline-size: var(--wrapper-max-width);
+
+  > * {
+    grid-column: wrapper
+  }
 }
 
 .grid-content {
   grid-column: content;
-  display: grid;
-  grid-template-columns: subgrid;
+  max-inline-size: var(--content-max-width);
+
+  > * {
+    grid-column: content
+  }
 }
 
 .grid-full {
   grid-column: page;
-  display: grid;
   grid-template-columns: subgrid;
-}
-
-/* Content sections */
-.content {
-  grid-column: content;
-  display: grid;
-  grid-template-columns: subgrid;
-  padding-block: var(--gutter);
 
   > * {
-    grid-column: wrapper;
-  }
-}
-
-/* Hero sections */
-.hero {
-  grid-column: page;
-  display: grid;
-  grid-template-columns: subgrid;
-  min-block-size: clamp(20rem, 50vb, 40rem);
-  align-content: center;
-  text-align: center;
-
-  > * {
-    grid-column: wrapper;
-  }
-}
-
-/* Modifier overrides (higher specificity — must come after base > * rules) */
-.content.content-full > * {
-  grid-column: wrapper;
-}
-
-.hero.hero-narrow > * {
-  grid-column: narrow;
-}
-
-/* Grid layout children positioning */
-.grid-global {
-  /* Default positioning for main layout elements */
-  > header,
-  > main,
-  > footer{
-    grid-column: page;
-    display: grid;
-  }
-
-  > main,
-  > footer{
-    grid-template-columns: subgrid;
-  }
-
-  /* Sidebar specific positioning */
-  > aside {
-    grid-area: sidebar;
-  }
-
-  /* Simple grid positioning (when using .simple modifier) */
-  &.simple {
-    > header,
-    > main,
-    > footer {
-      grid-column: wrapper;
-    }
-
-    .grid-narrow,
-    .grid-wrapper,
-    .grid-content {
-      grid-column: wrapper;
-      justify-self: center;
-    }
-
-    .hero > * {
-      grid-column: wrapper;
-    }
-
-    .hero.hero-narrow > *,
-    .hero.hero-full > * {
-      grid-column: wrapper;
-    }
-  }
-}
-
-/* Grid utilities for nested content */
-.grid-auto {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--gap, 1.5rem);
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap, 1.5rem);
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap, 1.5rem);
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap, 1.5rem);
-}
-
-/* Responsive grid utilities */
-@media screen and (max-width: 47.99rem) {
-  .grid-narrow,
-  .grid-wrapper,
-  .grid-content {
-    grid-column: wrapper;
-    justify-self: center;
-    max-inline-size: 100%;
-  }
-
-  .hero > * {
-    grid-column: wrapper;
-  }
-
-  .hero.hero-narrow > *,
-  .hero.hero-full > * {
-    grid-column: wrapper;
-  }
-
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 32rem) {
-  .grid-2 {
-    grid-template-columns: 1fr;
+    grid-column: page
   }
 }
 

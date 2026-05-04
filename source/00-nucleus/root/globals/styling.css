@@ -1,13 +1,14 @@
 :is(.off-canvas) {
   a {
     color: var(--color-dark--004);
-    text-decoration-style: dashed;
+    text-decoration-style: dotted;
     text-decoration-thickness: var(--space);
     text-decoration-color: var(--color-dark--004);
     text-underline-offset: var(--space);
 
     &:hover {
-      color: var(--color-dark--001);
+      color: var(--default-accent);
+      text-decoration-color: var(--default-accent);
     }
   }
 
@@ -17,5 +18,11 @@
       text-transform: lowercase;
       padding-inline: var(--space--gap);
     }
+  }
+
+  blockquote {
+    border-inline-start: var(--space) solid var(--default-accent);
+    padding-inline: var(--space--gap);
+    margin-inline: 0;
   }
 }

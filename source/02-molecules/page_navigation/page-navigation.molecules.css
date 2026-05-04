@@ -3,13 +3,17 @@
   align-content: space-between;
 
   > * {
-    max-block-size: var(--item-height);
+    max-block-size: fit-content;
   }
 
   @media (--breakpoint-tablet) {
     max-block-size: var(--item-height);
     max-inline-size: fit-content;
     grid-auto-flow: column;
+
+    > * {
+      max-block-size: var(--item-height);
+    }
   }
 
   @media (width >= 1885px) {

@@ -1,6 +1,13 @@
 :root {
-  --height: max(1.5rem, 4rem);
-  --item-height: 4rem;
+  --height: max(var(--height--min), var(--height--max));
+  --height--min: 1.5rem;
+  --height--max: 4rem;
+  --item-height: max(var(--item-height--min), var(--item-height--max));
+  --item-height--min: 2rem;
+  --item-height--max: 4rem;
+  --dot-height: max(var(--dot-height--min), var(--dot-height--max));
+  --dot-height--min: 0.2rem;
+  --dot-height--max: 0.25rem;
 
   /* Page Title Sizes */
   --page-title-size: clamp(2rem, 5vi, 3.5rem);

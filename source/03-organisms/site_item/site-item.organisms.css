@@ -11,3 +11,15 @@
     }
   }
 }
+
+:is(.site-main) {
+  :is(.region) {
+    grid-template-columns: subgrid;
+    grid-column: content;
+
+    > * {
+      grid-template-columns: subgrid;
+      grid-column: content;
+    }
+  }
+}
