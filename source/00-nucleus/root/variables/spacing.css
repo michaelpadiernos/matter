@@ -1,8 +1,10 @@
 :root {
   /* Spacing */
   --gutter: 2rem;
-  --space: 0.15em;
-  --space--gap: 1.5rem;
+  --space: 0.25em;
+  --space--001: 0.15em;
+  --space--002: 0.45em;
+  --space--gap: 1.5em;
   --space--gap-alt: 0.75em;
 
   /* Padding */

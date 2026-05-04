@@ -1,5 +1,5 @@
 :is(.off-canvas) {
-  overflow: clip;
+  overflow-block: auto;
 
   > * {
     grid-column: page;

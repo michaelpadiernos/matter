@@ -1,6 +1,7 @@
 :is(.off-canvas) {
   form {
     gap: var(--space--gap);
+    grid-column: content;
     grid-auto-rows: max-content;
   }
 

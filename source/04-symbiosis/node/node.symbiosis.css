@@ -1,5 +1,27 @@
-article:has(p) {
-   > p:not(:last-child) {
-    margin-block-end: var(--space--gap);
+article:has(h1, h2, h3, h4, h5, h6, blockquote, p, ul, section, .content-header, .content-main, .content-footer) {
+  grid-column: content;
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    margin-block: var(--space--002);
+  }
+
+  :is(blockquote) {
+    margin-block-end: var(--space--gap-alt);
+  }
+
+  :is(p:not(:last-child)) {
+    margin-block-end: var(--space--gap-alt);
+  }
+
+  :is(ul) {
+    margin-block-start: 0;
+  }
+
+  :is(section) {
+    grid-template-columns: subgrid;
+  }
+
+  :is(.content-footer) {
+    grid-row: 1 / 2;
   }
 }

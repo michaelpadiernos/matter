@@ -9,7 +9,7 @@
     scroll-padding-block: 5lh;
 
     @media(prefers-reduced-motion:no-preference) {
-      scroll-behavior:smooth}
+      scroll-behavior:smooth};
   }
 
   body {
@@ -21,7 +21,7 @@
     background: var(--default-color-bg);
     color: var(--default-color-text);
     font-size: var(--font-size-0);
-    line-height: 1.6
+    line-height: 1.6;
   }
 
   h1,
@@ -33,36 +33,36 @@
   blockquote,
   dl,
   dd {
-    margin-block: 0
+    margin-block: 0;
   }
 
   h1,
   h2,
   h3,h4 {
-    text-wrap: balance
+    text-wrap: balance;
   }
 
   h1,
   h2 {
-    font-weight: 900
+    font-weight: 900;
   }
 
   h1 {
     font-size: var(--font-size-5);
     font-weight: 900;
-    position: relative
+    position: relative;
   }
 
   h1+p,.hero h1~p {
-    font-size: var(--font-size-2)
+    font-size: var(--font-size-2);
   }
 
   .hero h1~p:last-of-type {
-    margin-block-end:var(--spacing-2xl)
+    margin-block-end:var(--spacing-2xl);
   }
 
   h2 {
-    font-size: var(--font-size-3)
+    font-size: var(--font-size-3);
   }
 
   h1,
@@ -72,7 +72,7 @@
   button,
   input,
   label {
-    line-height: 1.1
+    line-height: 1.1;
   }
 
   img,
@@ -80,7 +80,7 @@
   iframe {
     max-inline-size: 100%;
     display: block;
-    height: auto
+    height: auto;
   }
 
   input,
@@ -88,7 +88,7 @@
   textarea,
   select {
     font-family: inherit;
-    font-size: inherit
+    font-size: inherit;
   }
 
   textarea {
@@ -120,10 +120,10 @@
   }
 
   ::selection {
-    background: hsl(from var(--default-accent) h s l / .5)
+    background: hsl(from var(--default-accent) h s l / .5);
   }
 
   ::marker {
-    color: var(--default-accent)
+    color: var(--default-accent);
   }
 }

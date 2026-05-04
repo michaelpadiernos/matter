@@ -38,57 +38,63 @@
  * @ingroup themeable
  */
 #}
-{%
-  set title_classes = [
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
-{% if label_hidden %}
 
-  {% block label_hidden %}
+{% block field %}
 
-    {% if multiple %}
+  {%
+    set title_classes = [
+      label_display == 'visually_hidden' ? 'visually-hidden',
+    ]
+  %}
 
-      <div{{ attributes }}>
+  {% if label_hidden %}
+
+    {% block label_hidden %}
+
+      {% if multiple %}
+
+        <div{{ attributes }}>
+          {% for item in items %}
+            <div{{ item.attributes }}>
+              {% include '@atoms/item/item.html.twig' with {'item': item} %}
+            </div>
+          {% endfor %}
+        </div>
+
+      {% else %}
+
         {% for item in items %}
-          <div{{ item.attributes }}>
-            {% include '@atoms/item/item.html.twig' with {'item': item} %}
-          </div>
+          {% include '@atoms/item/item.html.twig' with {'item': item, 'attributes': attributes} %}
         {% endfor %}
+
+      {% endif %}
+
+    {% endblock label_hidden %}
+
+  {% else %}
+
+    {% block label_visible %}
+
+      <div{{ attributes.addClass(tags_classes) }}>
+
+        <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+
+        {% if multiple %}
+          <div class="field-item">
+        {% endif %}
+
+        {% for item in items %}
+          {% include '@atoms/item/item.html.twig' with {'item': item} %}
+        {% endfor %}
+
+        {% if multiple %}
+          </div>
+        {% endif %}
+
       </div>
 
-    {% else %}
+    {% endblock label_visible %}
 
-      {% for item in items %}
-        {% include '@atoms/item/item.html.twig' with {'item': item, 'attributes': attributes} %}
-      {% endfor %}
+  {% endif %}
 
-    {% endif %}
-
-  {% endblock label_hidden %}
-
-{% else %}
-
-  {% block label_visible %}
-
-    <div{{ attributes.addClass(tags_classes) }}>
-
-      <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-
-      {% if multiple %}
-        <div class="field-item">
-      {% endif %}
-
-      {% for item in items %}
-        {% include '@atoms/item/item.html.twig' with {'item': item} %}
-      {% endfor %}
-
-      {% if multiple %}
-        </div>
-      {% endif %}
-
-    </div>
-
-  {% endblock label_visible %}
-
-{% endif %}
+{% endblock field %}
