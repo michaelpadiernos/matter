@@ -10,9 +10,11 @@
     max-block-size: var(--item-height);
     max-inline-size: fit-content;
     grid-auto-flow: column;
+    grid-column: 2 / -1;
 
     > * {
       max-block-size: var(--item-height);
+      max-inline-size: fit-content;
     }
   }
 

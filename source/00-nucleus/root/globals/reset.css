@@ -88,8 +88,8 @@
   button,
   textarea,
   select {
-    font-family: inherit;
-    font-size: inherit;
+    font-family: var(--inherit);
+    font-size: var(--inherit);
   }
 
   textarea {
@@ -108,13 +108,13 @@
   }
 
   a:not([class]) {
-    color:var(--link);
+    color:var(--inherit);
     text-underline-offset: .25ex;
     text-decoration-thickness: 0;
     transition: .2s ease-in-out;
 
     &:hover,&:focus-visible {
-      text-decoration-color: var(--link);
+      text-decoration-color: var(--inherit);
       text-decoration-thickness: .25ex;
       text-underline-offset: .5ex;
     }

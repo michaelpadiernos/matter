@@ -6,13 +6,13 @@
 
 /* default variables */
 :root {
-  --link: inherit;
-  --page-title-size: 3.815em;
   --default-accent: var(--color-blue--001);
   --default-color-bg: var(--color-light--001);
   --default-color-text: var(--color-dark--001);
+  --inherit: var(--inherit);
   --border-size: 2px;
-  --border-radius: 3px;
+  --border-radius--default: 0;
+  --border-radius--alternate: 3px;
   --top-bar-height: 54px;
   --toolbar-height: 49px;
   --toolbars-height: calc(var(--top-bar-height) + var(--toolbar-height));
