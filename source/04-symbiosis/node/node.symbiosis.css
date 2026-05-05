@@ -24,4 +24,8 @@
   :is(.content-footer) {
     grid-row: 1 / 2;
   }
+
+  > * {
+    grid-column: auto;
+  }
 }

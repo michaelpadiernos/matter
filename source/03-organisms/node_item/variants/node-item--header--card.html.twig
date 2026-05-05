@@ -1,0 +1,13 @@
+{% extends '@organisms/node_item/node-item.html.twig' %}
+
+{% block node_item %}
+
+  {% if node_image %}
+    <header class="content-header">
+      {% block node_image %}
+        {% include '@organisms/node_item/variants/node-item--image.html.twig' %}
+      {% endblock node_image %}
+    </header>
+  {% endif %}
+
+{% endblock %}
