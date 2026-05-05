@@ -16,7 +16,6 @@
     margin: 0;
     min-block-size: 100svh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
     font-family: var(--font-stack--base);
     background: var(--default-color-bg);
     color: var(--default-color-text);
@@ -38,7 +37,9 @@
 
   h1,
   h2,
-  h3,h4 {
+  h3,
+  h4,
+  code {
     text-wrap: balance;
   }
 
@@ -48,13 +49,13 @@
   }
 
   h1 {
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-005);
     font-weight: 900;
     position: relative;
   }
 
   h1+p,.hero h1~p {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-002);
   }
 
   .hero h1~p:last-of-type {
@@ -62,7 +63,7 @@
   }
 
   h2 {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-003);
   }
 
   h1,
@@ -103,7 +104,7 @@
 
   :is(ul, ol):not(.links),
   :is(ul, ol)[role="list"] {
-    margin-inline-start: 1.25em;
+    margin-inline-start: var(--space--001);
   }
 
   a:not([class]) {

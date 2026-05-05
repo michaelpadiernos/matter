@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: var(--font-stack--base);
+  font-family: var(--font-stack--default);
 }
 
 h1,
@@ -15,32 +15,36 @@ h6 {
 
 h1,
 .heading-1 {
-  font-size: clamp(1.75rem, 4vi, 2.125rem);
+  font-size: var(--font-size-base--006);
+
+  &.page-title {
+    font-size: var(--font-size-003);
+  }
 }
 
 h2,
 .heading-2 {
-  font-size: clamp(1.5rem, 3.5vi, 1.875rem);
+  font-size: var(--font-size--base--005);
 }
 
 h3,
 .heading-3 {
-  font-size: clamp(1.25rem, 3vi, 1.5rem);
+  font-size: var(--font-size--base--004);
 }
 
 h4,
 .heading-4 {
-  font-size: clamp(1.125rem, 2.5vi, 1.25rem);
+  font-size: var(--font-size--base--003);
 }
 
 h5,
 .heading-5 {
-  font-size: clamp(1rem, 2vi, 1.125rem);
+  font-size: var(--font-size--base--002);
 }
 
 h6,
 .heading-6 {
-  font-size: clamp(0.875rem, 1.5vi, 1rem);
+  font-size: var(--font-size--base--001);
 }
 
 em {

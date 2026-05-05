@@ -92,7 +92,7 @@
 }
 
 /* stylelint-disable-next-line selector-class-pattern */
-:is(.permission_navigation) {
+:is(.permission-navigation) {
   .off-canvas {
     block-size: calc(100dvb - var(--toolbars-height));
     min-block-size: calc(100dvb - var(--toolbars-height));

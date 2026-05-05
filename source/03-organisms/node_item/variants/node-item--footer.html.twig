@@ -2,12 +2,33 @@
 
 {% block node_item %}
 
+  {%
+    set classes = [
+      'node-item',
+      'node-item--footer',
+      'content-footer',
+      'grid',
+    ]
+  %}
+
+  {%
+    set submitted_classes = [
+      'submitted',
+      'grid'
+    ]
+   %}
   {% if display_submitted %}
-    <footer class="content-footer">
+    <footer{{ attributes.addClass(classes) }}>
       {{ author_picture }}
-      <div{{ author_attributes.addClass('submitted') }}>
-        {% trans %}{{ author_name }} | <span class="date">{{ date }}</span> {% endtrans %}
+
+      <div{{ author_attributes.addClass(submitted_classes) }}>
+
+        {{ author_name }}
+        <span class="separator"> | </span>
+        <span class="date">{{ date }}</span>
+
         {{ metadata }}
+
       </div>
       {{ content.links }}
     </footer>

@@ -1,0 +1,24 @@
+{% extends '@molecules/container/container.html.twig' %}
+
+{% block container %}
+
+  {%
+    set classes = [
+      has_parent ? 'js-form-wrapper',
+      has_parent ? 'form-wrapper',
+      'container',
+      'text-format',
+      'help'
+    ]
+  %}
+
+  {% set rendered_children = children|render %}
+  {% if rendered_children|striptags|trim %}
+    <div{{ attributes.addClass(classes) }}>
+      {{ rendered_children }}
+    </div>
+  {% else %}
+    {{ rendered_children }}
+  {% endif %}
+
+{% endblock container %}

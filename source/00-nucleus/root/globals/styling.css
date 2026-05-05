@@ -16,7 +16,6 @@
   footer {
     :is(a, .nav-link):not(.brand-item__logo, .brand-item__name, .brand-item__slogan) {
       text-transform: lowercase;
-      padding-inline: var(--space--gap);
     }
   }
 
@@ -24,5 +23,44 @@
     border-inline-start: var(--space) solid var(--default-accent);
     padding-inline: var(--space--gap);
     margin-inline: 0;
+  }
+
+  code {
+    background-color: var(--color-light--003);
+    font-size: var(--font-size--default);
+    vertical-align: text-bottom;
+    border-radius: 3px;
+  }
+
+  table {
+    display: table;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    inline-size: 100%;
+    table-layout: fixed;
+
+    caption {
+      display: table-caption;
+      font-size: var(--font-size--alt--003);
+      margin: .5em 0 .75em;
+    }
+
+    tr {
+      display: table-row;
+      padding: var(--space);
+    }
+
+    th {
+      display: table-header-group;
+      font-weight: 700;
+      text-align: left;
+      padding: var(--space--gap-alt) var(--space--gap);
+    }
+
+    td {
+      display: table-cell;
+      padding: var(--space--gap-alt);
+    }
   }
 }

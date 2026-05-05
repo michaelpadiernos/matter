@@ -33,14 +33,16 @@
 
 {% block field %}
 
+  {%
+    set classes = [
+      'name'
+    ]
+   %}
+
   {% if not is_inline %}
     {% include "@molecules/field/field.html.twig" %}
   {% else %}
-  <span{{ attributes }}>
-    {%- for item in items -%}
-      {% include '@atoms/item/item.html.twig' with { 'item': item, 'attributes': item.attributes } %}
-    {%- endfor -%}
-  </span>
+    {% include '@atoms/username/username-alternate.html.twig' with { 'name': items.0.content, 'attributes': attributes } %}
   {% endif %}
 
 {% endblock %}

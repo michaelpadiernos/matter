@@ -9,6 +9,14 @@
 
 .flex {
   display: flex;
+
+  &.flex-column {
+    flex-direction: column;
+  }
+
+  &.flex-row {
+    flex-direction: row;
+  }
 }
 
 .grid,
@@ -53,6 +61,18 @@
   min-block-size: fit-content;
   align-content: center;
   gap: 0;
+
+  > * {
+    grid-column: content;
+
+    > * {
+      grid-column: content;
+    }
+  }
+
+  :is(.page-title) {
+    grid-column: content;
+  }
 }
 
 .breakout {
@@ -92,6 +112,7 @@
   }
 }
 
-.no-bullets {
+:is(.no-bullets) {
   list-style: "";
 }
+

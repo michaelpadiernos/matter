@@ -1,0 +1,6 @@
+:is(.field) {
+  .comment-form--title {
+    margin-block-end: var(--space--gap-alt);
+    grid-column: content;
+  }
+}

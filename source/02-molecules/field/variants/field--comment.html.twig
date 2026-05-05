@@ -33,6 +33,7 @@
 
   {%
     set classes = [
+      'field',
       'field--type-comment',
       'field--name-' ~ field_name|clean_class,
       'field--type-' ~ field_type|clean_class,
@@ -43,17 +44,32 @@
     ]
   %}
 
-  <section{{ attributes }}>
+  {%
+    set comments_classes = [
+      'comments-title',
+    ]
+  %}
+
+  {%
+    set form_classes = [
+      'comment-form--title',
+    ]
+  %}
+
+  <section{{ attributes.addClass(classes) }}>
+
     {% if comments and not label_hidden %}
       {{ title_prefix }}
-      <h2{{ title_attributes }}>{{ label }}</h2>
+      <h2{{ title_attributes.addClass(comments_classes) }}>
+        {% include '@atoms/label/label.html.twig' with { 'label': label } %}
+      </h2>
       {{ title_suffix }}
     {% endif %}
 
     {{ comments }}
 
     {% if comment_form %}
-      <h2{{ content_attributes }}>{{ 'Add new comment'|t }}</h2>
+      <h2{{ content_attributes.addClass(form_classes) }}>{{ 'Add new comment'|t }}</h2>
       {{ comment_form }}
     {% endif %}
 

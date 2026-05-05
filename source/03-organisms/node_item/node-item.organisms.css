@@ -1,0 +1,13 @@
+:is(.submitted) {
+  :is(.name) a {
+    @media (--breakpoint-tablet) {
+      padding-inline-start: 0;
+    }
+  }
+
+  .separator {
+    @media (--breakpoint-tablet) {
+      display: none;
+    }
+  }
+}

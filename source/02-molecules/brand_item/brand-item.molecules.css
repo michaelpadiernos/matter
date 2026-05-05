@@ -5,5 +5,6 @@
 }
 
 .brand-item__name {
+  font-weight: var(--font-weight--black);
   padding-inline: var(--space--gap);
 }

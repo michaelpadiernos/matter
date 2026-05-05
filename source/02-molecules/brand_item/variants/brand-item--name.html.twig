@@ -2,7 +2,7 @@
 
 {% block brand_item %}
   {% set site_name_parts = site_name|split(' ') %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="brand-item__name">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="brand-item brand-item__name">
       {% for site_name_part in site_name_parts %}
         <span class="brand-item__name-part">{{ site_name_part }}</span>
       {% endfor %}
