@@ -1,0 +1,13 @@
+{% extends '@atoms/links/links.html.twig' %}
+
+{% block links %}
+
+  {%
+    set classes = [
+      'node-links',
+    ]
+  %}
+
+  {{ parent() }}
+
+{% endblock %}

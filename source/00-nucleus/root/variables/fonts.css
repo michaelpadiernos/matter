@@ -1,14 +1,40 @@
 :root {
+  /* Font stacks */
   --font-stack--base: roboto, sans-serif, ui-sans-serif;
   --font-stack--mono: roboto mono, monospace, ui-monospace;
   --font-stack--slab: roboto slab, serif, ui-serif;
+
+  /* Font weights */
+  --font-weight--light: 100;
+  --font-weight--extralight: 200;
+  --font-weight--regular: 400;
   --font-weight--bold: 700;
-  --font-size--2: clamp(.7387rem, .7987rem + -.0775vw, .7813rem);
-  --font-size--1: clamp(.9375rem, .9182rem + .0857vw, .9846rem);
-  --font-size-0: clamp(1.125rem, 1.0483rem + .3409vw, 1.3125rem);
-  --font-size-1: clamp(1.35rem, 1.1865rem + .7265vw, 1.7496rem);
-  --font-size-2: clamp(1.62rem, 1.3287rem + 1.2948vw, 2.3322rem);
-  --font-size-3: clamp(1.944rem, 1.4675rem + 2.1178vw, 3.1088rem);
-  --font-size-4: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
-  --font-size-5: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
+  --font-weight--extrabold: 800;
+  --font-weight--black: 900;
+
+  /* Font sizes */
+  --font-size--default: var(--font-size--alt--002);
+  --font-size--alt--default: var(--font-size--base--001);
+
+  /* Base font sizes with scaling */
+  --font-size--base--001: clamp(0.875rem, 1.5vi, 1rem);
+  --font-size--base--002: clamp(1rem, 2vi, 1.125rem);
+  --font-size--base--003: clamp(1.125rem, 2.5vi, 1.25rem);
+  --font-size--base--004: clamp(1.25rem, 3vi, 1.5rem);
+  --font-size--base--005: clamp(1.5rem, 3.5vi, 1.875rem);
+  --font-size--base--006: clamp(1.75rem, 4vi, 2.125rem);
+
+  /* Alternative font sizes with scaling */
+  --font-size--alt--001: clamp(.7387rem, .7987rem + -.0775vw, .7813rem);
+  --font-size--alt--002: clamp(.875rem, .8482rem + .0857vw, 1rem);
+  --font-size--alt--003: clamp(1.125rem, 1.0483rem + .3409vw, 1.3125rem);
+
+  /* Font sizes with scaling */
+  --font-size-000: clamp(1.125rem, 1.0483rem + .3409vw, 1.3125rem);
+  --font-size-001: clamp(1.35rem, 1.1865rem + .7265vw, 1.7496rem);
+  --font-size-002: clamp(1.62rem, 1.3287rem + 1.2948vw, 2.3322rem);
+  --font-size-003: clamp(1.944rem, 1.4675rem + 2.1178vw, 3.1088rem);
+  --font-size-004: clamp(2.3328rem, 1.5919rem + 3.2931vw, 4.144rem);
+  --font-size-005: clamp(2.7994rem, 1.6848rem + 4.9538vw, 5.524rem);
+  --font-size-006: clamp(3.3592rem, 1.7504rem + 7.4406vw, 7.362rem);
 }

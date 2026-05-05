@@ -1,0 +1,19 @@
+{% extends '@molecules/container/container.html.twig' %}
+
+{% block container %}
+
+  {%
+    set classes = [
+      has_parent ? 'js-form-wrapper',
+      has_parent ? 'form-wrapper',
+      'container',
+      'container--actions'
+    ]
+  %}
+
+  <div{{ attributes.addClass(classes) }}>
+    {{ children }}
+  </div>
+
+{% endblock container %}
+

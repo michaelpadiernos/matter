@@ -1,0 +1,18 @@
+{% extends '@atoms/username/username.html.twig' %}
+
+{% block username %}
+
+  {%
+    set classes = [
+      'name',
+    ]
+  %}
+
+  {% if link_path -%}
+    <a{{ attributes.addClass(classes) }}>{{ name }}{{ extra }}</a>
+  {%- else -%}
+    <span{{ attributes.addClass(classes) }}>{{ name }}{{ extra }}</span>
+  {%- endif -%}
+
+
+{% endblock %}

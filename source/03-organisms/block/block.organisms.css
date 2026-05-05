@@ -1,0 +1,5 @@
+:is(.block-system) {
+  > * {
+    grid-column: content;
+  }
+}
