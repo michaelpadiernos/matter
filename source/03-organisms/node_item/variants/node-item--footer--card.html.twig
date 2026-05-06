@@ -5,8 +5,8 @@
   {%
     set classes = [
       'node-item',
-      'node-item--header',
-      'content-header',
+      'node-item--footer',
+      'content-footer',
       'grid',
     ]
   %}
@@ -17,10 +17,9 @@
       'grid'
     ]
    %}
-
   {% if display_submitted %}
-    <header class="content-header">
-     {{ author_picture }}
+    <footer{{ attributes.addClass(classes) }}>
+      {{ author_picture }}
 
       <div{{ author_attributes.addClass(submitted_classes) }}>
 
@@ -31,7 +30,8 @@
         {{ metadata }}
 
       </div>
-    </header>
+      {{ content.links }}
+    </footer>
   {% endif %}
 
 {% endblock %}

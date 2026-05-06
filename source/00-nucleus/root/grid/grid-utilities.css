@@ -4,42 +4,30 @@
 .grid-content,
 .grid-full {
   grid-template-columns: subgrid;
+
+  > * {
+    grid-column: auto;
+  }
 }
 
 .grid-narrow {
   grid-column: narrow;
   max-inline-size: var(--narrow-max-width);
-
-  > * {
-    grid-column: narrow
-  }
 }
 
 .grid-wrapper {
   grid-column: wrapper;
   max-inline-size: var(--wrapper-max-width);
-
-  > * {
-    grid-column: wrapper
-  }
 }
 
 .grid-content {
   grid-column: content;
   max-inline-size: var(--content-max-width);
-
-  > * {
-    grid-column: content
-  }
 }
 
 .grid-full {
   grid-column: page;
   grid-template-columns: subgrid;
-
-  > * {
-    grid-column: page
-  }
 }
 
 /* Alignment utilities */

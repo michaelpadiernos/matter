@@ -1,0 +1,15 @@
+{% extends '@molecules/links/links.html.twig' %}
+
+{% block links %}
+
+  {%
+    set classes = [
+      'node-links',
+      'no-bullets'
+    ]
+  %}
+
+  {% set attributes = attributes.addClass(classes) %}
+  {{ parent() }}
+
+{% endblock %}

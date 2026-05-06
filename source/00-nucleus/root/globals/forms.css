@@ -11,18 +11,18 @@
   textarea {
     margin: 0;
     padding: var(--padding-default);
-    border: 2px solid var(--color-dark--001);
-    border-radius: 0;
+    border: var(--border-size) solid var(--color-dark--001);
+    border-radius: var(--border-radius--default);
     field-sizing: content;
-    font-family: inherit;
-    font-size: inherit;
+    font-family: var(--inherit);
+    font-size: var(--inherit);
     background-color: var(--color-light--002);
 
     &:focus,
     &:focus-visible,
     &:focus-within {
-      outline: 0;
-      border-radius: 0;
+      outline: var(--border-size);
+      border-radius: var(--border-radius--default);
     }
   }
 

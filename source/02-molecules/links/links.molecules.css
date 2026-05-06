@@ -1,0 +1,18 @@
+:is(.links) {
+  padding-inline: 0;
+  gap: var(--space--gap);
+
+  &.inline {
+    grid-auto-columns: max-content;
+
+    > * {
+      grid-column: initial;
+      grid-row: 1;
+      min-inline-size: max-content;
+    }
+  }
+}
+
+footer:has(.links) {
+  padding-block-start: 0;
+}

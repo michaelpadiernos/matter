@@ -1,0 +1,19 @@
+{% extends '@organisms/form/form.html.twig' %}
+
+{% block form %}
+
+  {%
+    set classes = [
+      'form',
+      'form--webform',
+      'grid',
+    ]
+  %}
+
+  <form{{ attributes.addClass(classes) }}>
+    {{ title_prefix }}
+    {{ children }}
+    {{ title_suffix }}
+  </form>
+
+{% endblock form %}

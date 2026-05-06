@@ -21,3 +21,38 @@ function matter_theme_suggestions_field_alter(array &$suggestions, array $variab
     $suggestions[] = 'field__node__name';
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_form_alter().
+ *
+ * Routes webforms through form--webform.html.twig.
+ */
+function matter_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#webform_id'])) {
+    $suggestions[] = 'form__webform';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_webform_alter().
+ *
+ * Routes webform theme hook through form--webform.html.twig.
+ */
+function matter_theme_suggestions_webform_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'webform__custom';
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Registers form--webform.html.twig under the webform hook.
+ */
+function matter_theme(array $existing, $type, $theme, $path): array {
+  return [
+    'webform__custom' => [
+      'base hook' => 'webform',
+      'template' => 'form--webform',
+      'path' => $path . '/source/03-organisms/form/variants',
+    ],
+  ];
+}

@@ -11,25 +11,8 @@
     ]
   %}
 
-  {%
-    set submitted_classes = [
-      'submitted',
-      'grid'
-    ]
-   %}
-  {% if display_submitted %}
+  {% if content.links %}
     <footer{{ attributes.addClass(classes) }}>
-      {{ author_picture }}
-
-      <div{{ author_attributes.addClass(submitted_classes) }}>
-
-        {{ author_name }}
-        <span class="separator"> | </span>
-        <span class="date">{{ date }}</span>
-
-        {{ metadata }}
-
-      </div>
       {{ content.links }}
     </footer>
   {% endif %}

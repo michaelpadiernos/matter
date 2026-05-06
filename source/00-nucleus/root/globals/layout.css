@@ -8,6 +8,7 @@
   header,
   main,
   footer {
+    border: var(--border-size) solid transparent;
     grid-template-columns: subgrid;
 
     > * {
@@ -37,10 +38,6 @@
     grid-auto-rows: max-content;
     position: relative;
 
-    > * {
-      grid-column: 1 / -1;
-    }
-
     :is(.region) {
       > * {
         display: flex;
@@ -59,7 +56,8 @@
       grid-template-columns: auto 1fr;
 
       > * {
-        grid-column: auto;
+        place-content: space-between;
+        grid-row: 1;
       }
     }
 

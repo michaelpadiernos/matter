@@ -1,15 +1,4 @@
-{#
-/**
- * @file
- * Custom theme implementation to display a node.
- * Starlight default for all nodes not in "full" view mode
- *
- * Documentation here: https://api.drupal.org/api/drupal/core!modules!node!templates!node.html.twig/8.2.x
- *
- * @ingroup themeable
- */
-#}
-
+{% extends '@symbiosis/node/node.html.twig' %}
 {% block node %}
 
   {%
@@ -25,7 +14,7 @@
 
   <article{{ attributes.addClass(classes) }}>
 
-    {% include '@organisms/node_item/variants/node-item--header.html.twig' %}
+    {% include '@organisms/node_item/variants/node-item--header--teaser.html.twig' %}
 
     {% include '@organisms/node_item/variants/node-item--content.html.twig' %}
 

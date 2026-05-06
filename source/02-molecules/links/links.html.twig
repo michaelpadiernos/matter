@@ -47,11 +47,11 @@
       {%- for item in links -%}
         <li{{ item.attributes }}>
           {%- if item.link -%}
-            {{ item.link }}
+            {% include '@atoms/link/link.html.twig' %}
           {%- elseif item.text_attributes -%}
-            <span{{ item.text_attributes }}>{{ item.text }}</span>
+            <span{{ item.text_attributes }}>{% include '@atoms/text/text.html.twig' %}</span>
           {%- else -%}
-            {{ item.text }}
+            {% include '@atoms/text/text.html.twig' %}
           {%- endif -%}
         </li>
       {%- endfor -%}

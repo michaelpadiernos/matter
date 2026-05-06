@@ -1,0 +1,8 @@
+:is(form) {
+  :is(.ck) {
+    :is(&.ck-editor) {
+      border: var(--border-size) solid var(--color-dark--001);
+    }
+  }
+}
+
