@@ -1,0 +1,25 @@
+{% extends '@symbiosis/node/node.html.twig' %}
+{% block node %}
+
+  {%
+    set classes = [
+      'node',
+      node.bundle|clean_class,
+      view_mode ? view_mode|clean_class,
+      'grid-content',
+      'flex',
+      'flex-column'
+    ]
+  %}
+
+  <article{{ attributes.addClass(classes) }}>
+
+    {% include '@organisms/node_item/variants/node-item--header--teaser.html.twig' %}
+
+    {% include '@organisms/node_item/variants/node-item--content.html.twig' %}
+
+    {% include '@organisms/node_item/variants/node-item--footer.html.twig' %}
+
+  </article>
+
+{% endblock %}

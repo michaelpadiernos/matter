@@ -1,4 +1,4 @@
-:is(article, section):has(h1, h2, h3, h4, h5, h6, blockquote, p, ul, section, .content-header, .content-main, .content-footer) {
+:is(article, section) {
   grid-column: content;
 
   :is(h1, h2, h3, h4, h5, h6) {
@@ -14,6 +14,9 @@
   }
 
   :is(ul) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xs);
     margin-block-start: 0;
   }
 

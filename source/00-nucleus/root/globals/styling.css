@@ -48,19 +48,26 @@
 
     tr {
       display: table-row;
-      padding: var(--space);
     }
 
     th {
-      display: table-header-group;
       font-weight: 700;
       text-align: left;
-      padding: var(--space--gap-alt) var(--space--gap);
+      padding-block: var(--space--gap-alt);
     }
 
     td {
+      padding-block: var(--space--gap-alt);
+      vertical-align: baseline;
+    }
+
+    th,
+    td {
       display: table-cell;
-      padding: var(--space--gap-alt);
+
+      &:not(:first-child, :last-child) {
+        padding-inline: var(--space--gap-alt);
+      }
     }
   }
 }
