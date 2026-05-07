@@ -1,7 +1,6 @@
 @layer reset {
   html {
     interpolate-size: allow-keywords;
-    font-family: var(--font-stack--base, system-ui);
     line-height: 1.6;
     accent-color: var(--default-accent);
     block-size: 100%;
@@ -16,7 +15,6 @@
     margin: 0;
     min-block-size: 100svh;
     display: grid;
-    font-family: var(--font-stack--base);
     background: var(--default-color-bg);
     color: var(--default-color-text);
     font-size: var(--font-size-0);

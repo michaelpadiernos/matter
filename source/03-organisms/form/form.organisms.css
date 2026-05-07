@@ -4,5 +4,92 @@
       border: var(--border-size) solid var(--color-dark--001);
     }
   }
+
+  :is(.progress-tracker) {
+    flex-direction: row;
+
+    & ::before {
+      inline-size: 2rem;
+      block-size: 2rem;
+      padding-block-end: 0;
+    }
+
+    & ::after {
+      top: 0.9rem;
+    }
+  }
+
+  :is(.progress-step):has(.progress-marker) {
+    & ::before {
+      background-color: var(--color-light--005);
+      border-color: var(--color-light--005);
+    }
+
+    & ::after {
+      background-color: var(--color-light--005);
+    }
+  }
+
+  :is(.is-active):has(.progress-marker) {
+    & ::before {
+      background-color: var(--default-accent);
+      border-color: var(--default-accent);
+    }
+  }
+
+  :is(.webform-custom-options-buttons) {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--spacing-2xs);
+
+    :is(.webform-custom-options-button) {
+      cursor: pointer;
+      color: var(--color-dark--004);
+      border: var(--border-size) solid var(--color-light--005);
+      border-radius: var(--border-radius--default);
+      text-align: left;
+      padding-block: 0;
+      padding-inline: var(--space--gap) 0;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space--gap-alt);
+
+      .description {
+        font-size: var(--inherit);
+        border-left: var(--border-size) solid var(--color-light--005);
+        padding: var(--space--gap-alt);
+        margin-inline-start: var(--space--gap-alt);
+        max-inline-size: 100%;
+      }
+
+      &[aria-checked='true'] {
+        background-color: var(--default-accent--alternate);
+        color: var(--color-dark--001);
+        border-color: var(--color-dark--001);
+
+        .description {
+          background-color: var(--color-dark--001);
+          border-color: var(--color-dark--001);
+          color: var(--default-accent--alternate);
+        }
+
+        &:hover {
+          background-color: var(--default-accent--alternate);
+        }
+      }
+
+      &:hover {
+        color: var(--color-dark--001);
+        background-color: var(--color-light--002);
+        border-color: var(--color-dark--001);
+
+        .description {
+          border-color: var(--color-dark--001);
+        }
+      }
+    }
+  }
 }
 

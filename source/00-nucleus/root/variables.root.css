@@ -7,6 +7,7 @@
 /* default variables */
 :root {
   --default-accent: var(--color-blue--001);
+  --default-accent--alternate: var(--color-blue--005);
   --default-color-bg: var(--color-light--001);
   --default-color-text: var(--color-dark--001);
   --inherit: var(--inherit);
