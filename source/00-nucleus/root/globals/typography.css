@@ -1,17 +1,7 @@
-html,
-body {
+:is(html, body):has(.off-canvas) {
   font-family: var(--font-stack--default);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  font-family: var(--font-stack--slab);
-}
 
 h1,
 .heading-1 {
@@ -53,4 +43,16 @@ em {
 
 strong {
   font-weight: 700;
+}
+
+:is(.off-canvas) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    font-family: var(--font-stack--slab);
+  }
 }

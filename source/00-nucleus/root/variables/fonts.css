@@ -1,6 +1,6 @@
 :root {
   /* Font stacks */
-  --font-stack--base: roboto, sans-serif, ui-sans-serif;
+  --font-stack--default: roboto, sans-serif, ui-sans-serif;
   --font-stack--mono: roboto mono, monospace, ui-monospace;
   --font-stack--slab: roboto slab, serif, ui-serif;
 

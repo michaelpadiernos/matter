@@ -4,5 +4,45 @@
       border: var(--border-size) solid var(--color-dark--001);
     }
   }
+
+  :is(.progress-tracker) {
+    flex-direction: row;
+
+    & ::before {
+      inline-size: 2rem;
+      block-size: 2rem;
+      padding-block-end: 0;
+    }
+
+    & ::after {
+      top: 0.9rem;
+    }
+  }
+
+  :is(.webform-custom-options-buttons) {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--spacing-2xs);
+
+    :is(.webform-custom-options-button) {
+      cursor: pointer;
+      border: var(--border-size) solid var(--color-dark--001);
+      text-align: left;
+      padding: var(--padding-default);
+      display: grid;
+      grid-auto-flow: column;
+      place-content: center;
+      gap: var(--space--gap-alt);
+
+      .description {
+        max-inline-size: 100%;
+      }
+
+      &[aria-checked='true'] {
+        background-color: var(--color-dark--001);
+        color: var(--color-light--001);
+      }
+    }
+  }
 }
 
