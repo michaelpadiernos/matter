@@ -19,6 +19,17 @@
     }
   }
 
+  :is(.progress-step):has(.progress-marker) {
+    & ::before {
+      background-color: var(--color-light--005);
+      border-color: var(--color-light--005);
+    }
+
+    & ::after {
+      background-color: var(--color-light--005);
+    }
+  }
+
   :is(.is-active):has(.progress-marker) {
     & ::before {
       background-color: var(--default-accent);
