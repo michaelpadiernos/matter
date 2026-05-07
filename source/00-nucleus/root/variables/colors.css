@@ -4,6 +4,7 @@
   --color-light--002: #f5f4f4;
   --color-light--003: #eae9e9;
   --color-light--004: #b7b7b6;
+  --color-light--005: #8c8b8b;
 
   /* dark */
   --color-dark--001: black;
@@ -16,6 +17,10 @@
 
   /* blue */
   --color-blue--001: #07c;
+  --color-blue--002: #158aff;
+  --color-blue--003: #3aaaff;
+  --color-blue--004: #5cc0ff;
+  --color-blue--005: #8cd0ff;
 }
 
 @media(prefers-color-scheme: light) {

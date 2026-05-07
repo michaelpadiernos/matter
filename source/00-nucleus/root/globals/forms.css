@@ -9,19 +9,21 @@
   input,
   select,
   textarea {
+    color: var(--color-dark--004);
     margin: 0;
     padding: var(--padding-default);
-    border: var(--border-size) solid var(--color-dark--001);
+    border: var(--border-size) solid var(--color-light--005);
     border-radius: var(--border-radius--default);
     field-sizing: content;
     font-family: var(--inherit);
     font-size: var(--inherit);
-    background-color: var(--color-light--002);
 
     &:focus,
     &:focus-visible,
     &:focus-within {
       outline: var(--border-size);
+      color: var(--color-dark--001);
+      border-color: var(--color-dark--001);
       border-radius: var(--border-radius--default);
     }
   }
@@ -35,6 +37,8 @@
 
   input,
   textarea {
+    background-color: var(--color-light--002);
+
     &:focus,
     &:focus-visible,
     &:focus-within {
@@ -42,6 +46,22 @@
         color: transparent;
       }
     }
+  }
+
+  button,
+  :is(.button) {
+    background-color: var(--color-light--001);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-light--002);
+      border-color: var(--color-dark--001);
+      color: var(--color-dark--001);
+    }
+  }
+
+  select {
+    background-color: var(--color-light--002);
   }
 
   textarea {
