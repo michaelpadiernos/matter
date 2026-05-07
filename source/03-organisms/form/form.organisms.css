@@ -46,6 +46,7 @@
       cursor: pointer;
       color: var(--color-dark--004);
       border: var(--border-size) solid var(--color-light--005);
+      border-radius: var(--border-radius--default);
       text-align: left;
       padding-block: 0;
       padding-inline: var(--space--gap) 0;
@@ -73,11 +74,16 @@
           border-color: var(--color-dark--001);
           color: var(--default-accent--alternate);
         }
+
+        &:hover {
+          background-color: var(--default-accent--alternate);
+        }
       }
 
       &:hover {
-        border-color: var(--color-dark--001);
         color: var(--color-dark--001);
+        background-color: var(--color-light--002);
+        border-color: var(--color-dark--001);
 
         .description {
           border-color: var(--color-dark--001);
