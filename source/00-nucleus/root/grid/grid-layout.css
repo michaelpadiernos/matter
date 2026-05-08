@@ -23,7 +23,6 @@
 .grid-global {
   /* Prevent overflow on all screen sizes */
   max-inline-size: 100vi;
-  overflow-inline: hidden;
 
   /* Content width constraints */
   --content-max-width: 85rem;

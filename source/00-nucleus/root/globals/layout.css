@@ -1,6 +1,4 @@
 :is(.off-canvas) {
-  overflow-block: auto;
-
   > * {
     grid-column: page;
   }
@@ -33,10 +31,12 @@
   }
 
   header {
+    opacity: .999;
+    background: rgb(var(--color-light--001), .8);
+    backdrop-filter: blur(10px);
     grid-row: header;
     grid-template-columns: 1fr;
     grid-auto-rows: max-content;
-    position: relative;
 
     :is(.region) {
       > * {
