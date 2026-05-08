@@ -2,4 +2,8 @@
   @media (--breakpoint-tablet) {
     grid-auto-flow: column;
   }
+
+  &:is(.navigation-main, .navigation-focus) {
+    margin-inline-start: 0;
+  }
 }
