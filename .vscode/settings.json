@@ -1,5 +1,5 @@
 {
   "twiggy.framework": "twig",
-  "twiggy.vanillaTwigEnvironmentPath": "${workspaceFolder}/web/themes/custom/matter/.vscode/twig-env.php",
-  "twiggy.phpExecutable": "${workspaceFolder}/web/themes/custom/matter/.vscode/php-ddev.sh"
+  "twiggy.vanillaTwigEnvironmentPath": "${workspaceFolder}/.vscode/twig-env.php",
+  "twiggy.phpExecutable": "${workspaceFolder}/.vscode/php-ddev.sh"
 }

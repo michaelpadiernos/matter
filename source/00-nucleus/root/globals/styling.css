@@ -28,8 +28,8 @@
   code {
     background-color: var(--color-light--003);
     font-size: var(--font-size--default);
-    vertical-align: text-bottom;
-    border-radius: 3px;
+    vertical-align: center;
+    border-radius: var(--border-radius--alternate);
   }
 
   table {

@@ -4,6 +4,10 @@
     display: block;
   }
 
+  > * {
+    background-blend-mode: normal;
+  }
+
   @media (--breakpoint-tablet) {
     .page-navigation--menu-button,
     .page-navigation--menu-icon {
