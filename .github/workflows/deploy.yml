@@ -27,6 +27,11 @@ jobs:
       - name: Build assets
         run: npx gulp build
 
+      - name: Clone Font Awesome
+        run: |
+          rm -rf assets/images/Font-Awesome
+          git clone --depth 1 https://github.com/FortAwesome/Font-Awesome.git assets/images/Font-Awesome
+
       - name: Deploy via rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
