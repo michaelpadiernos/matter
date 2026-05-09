@@ -1,0 +1,15 @@
+:is(.maintenance-page) {
+  :is(header, main) {
+    grid-row: main;
+    grid-column: page;
+    place-content: center;
+    grid-template-columns: auto;
+  }
+
+  :is(main) {
+    display: none;
+    /* display: flex; */
+    place-items: center;
+    flex-direction: column;
+  }
+}
