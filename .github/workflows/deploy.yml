@@ -14,15 +14,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: package-lock.json
+      - name: Set up mise and Node.js
+        run: |
+          if ! command -v mise &> /dev/null && ! [ -f "$HOME/.local/bin/mise" ]; then
+            curl https://mise.run | sh
+          fi
+          export PATH="$HOME/.local/bin:$PATH"
+          mise use --global node@latest
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build assets
         run: npx gulp build
