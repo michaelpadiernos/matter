@@ -76,6 +76,7 @@
     grid-template-rows: min-content;
 
     > .hero {
+      margin-inline: 0;
       grid-column: page;
     }
   }

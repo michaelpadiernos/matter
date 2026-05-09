@@ -1,4 +1,5 @@
 :is(.links) {
+  margin-inline-start: var(--space--gap-alt);
   padding-inline: 0;
   gap: var(--space--gap);
 
