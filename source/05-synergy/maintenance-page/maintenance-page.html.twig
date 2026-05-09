@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see \Drupal\Core\Theme\ThemePreprocess::preprocessMaintenancePage()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% include '@synergy/maintenance-page/components/item--header.html.twig' %}
+
+{% include '@synergy/maintenance-page/components/item--main.html.twig' %}

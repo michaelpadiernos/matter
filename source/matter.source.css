@@ -8,5 +8,6 @@
 @import-glob "./02-molecules/**/*.css";
 @import-glob "./03-organisms/**/*.css";
 @import-glob "./04-symbiosis/**/*.css";
+@import-glob "./05-synergy/**/*.css";
 
 @import "./00-nucleus/fixes.nucleus.css";

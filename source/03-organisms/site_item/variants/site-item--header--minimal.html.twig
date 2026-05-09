@@ -1,0 +1,17 @@
+{% extends '@organisms/site_item/site-item.html.twig' %}
+
+{% block site_item %}
+
+  <header role="banner" class="grid site-header">
+
+    {% if page.branding %}
+
+      {% block branding %}
+        {{ page.branding }}
+      {% endblock %}
+
+    {% endif %}
+
+  </header>
+
+{% endblock %}
