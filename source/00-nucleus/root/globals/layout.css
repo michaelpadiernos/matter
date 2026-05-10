@@ -31,9 +31,12 @@
   }
 
   header {
+    text-transform: lowercase;
+    overflow: clip;
     opacity: .999;
     background: rgb(var(--color-light--001), .8);
     backdrop-filter: blur(10px);
+    max-block-size: var(--item-height);
     grid-row: header;
     grid-template-columns: 1fr;
     grid-auto-rows: max-content;
@@ -95,10 +98,6 @@
   .off-canvas {
     block-size: calc(100dvb - var(--toolbars-height));
     min-block-size: calc(100dvb - var(--toolbars-height));
-
-    header {
-      min-block-size: calc(100dvb - var(--toolbars-height));
-    }
 
     @media (--breakpoint-tablet) {
       header {
