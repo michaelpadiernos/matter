@@ -14,26 +14,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up mise and Node.js
-        run: |
-          if ! command -v mise &> /dev/null && ! [ -f "$HOME/.local/bin/mise" ]; then
-            curl https://mise.run | sh
-          fi
-          export PATH="$HOME/.local/bin:$PATH"
-          mise use --global node@latest
-          echo "$HOME/.local/bin" >> $GITHUB_PATH
-          echo "$HOME/.local/share/mise/shims" >> $GITHUB_PATH
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Copy Font Awesome from node_modules
+        run: cp -r node_modules/@fortawesome/fontawesome-free assets/images/Font-Awesome
 
       - name: Build assets
         run: npx gulp build
-
-      - name: Clone Font Awesome
-        run: |
-          rm -rf assets/images/Font-Awesome
-          git clone --depth 1 https://github.com/FortAwesome/Font-Awesome.git assets/images/Font-Awesome
 
       - name: Deploy via rsync
         uses: burnett01/rsync-deployments@7.0.1
