@@ -20,7 +20,7 @@ jobs:
           node-version: lts/*
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Copy Font Awesome from node_modules
         run: cp -r node_modules/@fortawesome/fontawesome-free assets/images/Font-Awesome
