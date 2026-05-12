@@ -1,3 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation of an image.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the img tag.
+ * - style_name: (optional) The name of the image style applied.
+ *
+ * @see \Drupal\Core\Theme\ImagePreprocess::preprocessImage()
+ *
+ * @ingroup themeable
+ */
+#}
+
 {% block image %}
-  {{ image }}
+
+  {%
+    set classes = [
+      style_name ? 'image-style-' ~ style_name|clean_class,
+  ]
+  %}
+
+  <img{{ attributes.addClass(classes) }} />
+
 {% endblock %}

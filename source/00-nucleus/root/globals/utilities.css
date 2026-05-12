@@ -1,3 +1,9 @@
+.clearfix::after {
+  content: "";
+  display: inline-block;
+  overflow: hidden;
+}
+
 .hidden {
   display: none;
   visibility: hidden;

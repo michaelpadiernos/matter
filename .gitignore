@@ -14,3 +14,4 @@ package-lock.json
 # Ignore .temp & .cache folders
 .cache/
 .temp/
+source/01-atoms/icon
