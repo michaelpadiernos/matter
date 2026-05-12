@@ -48,7 +48,7 @@ function matter_theme_suggestions_webform_alter(array &$suggestions, array $vari
  * Routes feed_icon, image_style, image_widget, and image_formatter through theme templates.
  */
 function matter_theme_registry_alter(array &$theme_registry): void {
-  $theme_path = \Drupal::service('extension.list.theme')->getPath('matter');
+  $theme_path = \Drupal::root() . '/' . \Drupal::service('extension.list.theme')->getPath('matter');
   if (isset($theme_registry['feed_icon'])) {
     $theme_registry['feed_icon']['path'] = $theme_path . '/source/01-atoms/icon/variants';
     $theme_registry['feed_icon']['template'] = 'icon--feed';
