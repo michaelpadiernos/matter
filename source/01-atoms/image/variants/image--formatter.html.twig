@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a formatted image field.
+ *
+ * Available variables:
+ * - image: A collection of image data.
+ * - image_style: An optional image style.
+ * - url: An optional URL the image can be linked to.
+ *
+ * @see \Drupal\image\Hook\ImageThemeHooks::preprocessImageFormatter()
+ *
+ * @ingroup themeable
+ */
+#}
+{% extends "@atoms/image/image.html.twig" %}
+
+{% block image %}
+
+  {% if url %}
+    {% set styled_image %}
+      {% include "@atoms/image/image--style.html.twig" %}
+    {% endset %}
+    {{ link(styled_image, url) }}
+  {% else %}
+    {% include "@atoms/image/image--style.html.twig" %}
+  {% endif %}
+
+{% endblock %}

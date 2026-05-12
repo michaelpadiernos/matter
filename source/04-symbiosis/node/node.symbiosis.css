@@ -26,6 +26,10 @@
 
   :is(.content-footer) {
     grid-row: 1 / 2;
+
+    ul {
+      margin-inline-start: 0;
+    }
   }
 
   > * {
