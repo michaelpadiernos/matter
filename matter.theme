@@ -43,30 +43,26 @@ function matter_theme_suggestions_webform_alter(array &$suggestions, array $vari
 }
 
 /**
- * Implements hook_theme_suggestions_feed_icon_alter().
- *
- * Routes feed_icon through icon--feed.html.twig.
- */
-function matter_theme_suggestions_feed_icon_alter(array &$suggestions, array $variables): void {
-  $suggestions[] = 'icon__feed';
-}
-
-/**
  * Implements hook_theme_registry_alter().
  *
- * Routes image_style through image--style.html.twig.
+ * Routes feed_icon, image_style, image_widget, and image_formatter through theme templates.
  */
 function matter_theme_registry_alter(array &$theme_registry): void {
+  $theme_path = \Drupal::service('extension.list.theme')->getPath('matter');
+  if (isset($theme_registry['feed_icon'])) {
+    $theme_registry['feed_icon']['path'] = $theme_path . '/source/01-atoms/icon/variants';
+    $theme_registry['feed_icon']['template'] = 'icon--feed';
+  }
   if (isset($theme_registry['image_style'])) {
-    $theme_registry['image_style']['path'] = \Drupal::service('extension.list.theme')->getPath('matter') . '/source/01-atoms/image/variants';
+    $theme_registry['image_style']['path'] = $theme_path . '/source/01-atoms/image/variants';
     $theme_registry['image_style']['template'] = 'image--style';
   }
   if (isset($theme_registry['image_widget'])) {
-    $theme_registry['image_widget']['path'] = \Drupal::service('extension.list.theme')->getPath('matter') . '/source/01-atoms/image/variants';
+    $theme_registry['image_widget']['path'] = $theme_path . '/source/01-atoms/image/variants';
     $theme_registry['image_widget']['template'] = 'image--widget';
   }
   if (isset($theme_registry['image_formatter'])) {
-    $theme_registry['image_formatter']['path'] = \Drupal::service('extension.list.theme')->getPath('matter') . '/source/01-atoms/image/variants';
+    $theme_registry['image_formatter']['path'] = $theme_path . '/source/01-atoms/image/variants';
     $theme_registry['image_formatter']['template'] = 'image--formatter';
   }
 }
@@ -75,7 +71,6 @@ function matter_theme_registry_alter(array &$theme_registry): void {
  * Implements hook_theme().
  *
  * Registers form--webform.html.twig under the webform hook.
- * Registers icon--feed.html.twig under the feed_icon hook.
  */
 function matter_theme(array $existing, $type, $theme, $path): array {
   return [
@@ -83,11 +78,6 @@ function matter_theme(array $existing, $type, $theme, $path): array {
       'base hook' => 'webform',
       'template' => 'form--webform',
       'path' => $path . '/source/03-organisms/form/variants',
-    ],
-    'icon__feed' => [
-      'base hook' => 'feed_icon',
-      'template' => 'icon--feed',
-      'path' => $path . '/source/01-atoms/icon/variants',
     ],
   ];
 }
