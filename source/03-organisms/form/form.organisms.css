@@ -49,18 +49,18 @@
       border-radius: var(--border-radius--default);
       text-align: left;
       padding-block: 0;
-      padding-inline: var(--space--gap) 0;
+      padding-inline: var(--gap) 0;
       display: grid;
       grid-template-columns: auto 1fr;
       justify-content: center;
       align-items: center;
-      gap: var(--space--gap-alt);
+      gap: var(--space--gap--002);
 
       .description {
         font-size: var(--inherit);
         border-left: var(--border-size) solid var(--color-light--005);
-        padding: var(--space--gap-alt);
-        margin-inline-start: var(--space--gap-alt);
+        padding: var(--space--gap--002);
+        margin-inline-start: var(--space--gap--002);
         max-inline-size: 100%;
       }
 

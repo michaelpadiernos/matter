@@ -4,11 +4,6 @@
   overflow: hidden;
 }
 
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
 .grid {
   display: grid;
 }
@@ -62,7 +57,7 @@
 }
 
 .hero {
-  --padding-block: var(--space--gap);
+  --padding-block: var(--gap);
 
   padding-block: var(--padding-block);
   background-color: white;
@@ -130,6 +125,41 @@
 
     @media (--breakpoint-tablet) {
       inset-block-start: calc(var(--toolbar-height) + 5px);
+    }
+  }
+}
+
+:is(.vertical-tabs) {
+  .vertical-tabs__menu {
+    gap: 0;
+
+    .vertical-tabs__menu-item a {
+      padding: var(--padding-default);
+    }
+  }
+
+  .vertical-tabs__panes {
+    --padding-default: 1.05em var(--space--gap--004);
+
+    padding: var(--padding-default);
+
+    :is(label),
+    :is(legend) {
+      padding-block-end: var(--space--gap--002);
+    }
+
+    :is(fieldset) {
+      border: 0;
+      padding: 0 0 var(--space--gap--002) 0;
+      margin: 0;
+    }
+
+    :is(.description) {
+      margin-block: var(--space--gap--002);
+
+      &:last-child {
+        margin-block-end: 0;
+      }
     }
   }
 }

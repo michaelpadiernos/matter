@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'radios' #type form element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The rendered radios.
+ *
+ * @see\Drupal\Core\Form\FormPreprocess::preprocessRadios()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'form-radios',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>{{ children }}</div>

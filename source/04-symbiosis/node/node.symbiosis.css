@@ -6,11 +6,11 @@
   }
 
   :is(blockquote) {
-    margin-block-end: var(--space--gap-alt);
+    margin-block-end: var(--space--gap--002);
   }
 
   :is(p:not(:last-child)) {
-    margin-block-end: var(--space--gap-alt);
+    margin-block-end: var(--space--gap--002);
   }
 
   :is(ul) {

@@ -1,11 +1,23 @@
 :root {
-  /* Spacing */
-  --gutter: 2rem;
-  --space: 0.25em;
-  --space--001: 0.15em;
-  --space--002: 0.45em;
-  --space--gap: 1.5em;
-  --space--gap-alt: 0.75em;
+  /* Spacing: Defaults */
+  --gap: var(--space--gap--004);
+  --gutter: var(--space--gap--005);
+  --space: var(--space--002);
+
+  /* Spacing: Scaled */
+  --space--001: 0.1em;
+  --space--002: 0.25em;
+  --space--003: 0.4em;
+  --space--004: 0.65em;
+  --space--005: 0.8em;
+  --space--006: 1em;
+
+  /* Gaps: Scaled */
+  --space--gap--001: 0.6em;
+  --space--gap--002: 0.75em;
+  --space--gap--003: 1.15em;
+  --space--gap--004: 1.5em;
+  --space--gap--005: 2em;
 
   /* Padding */
   --padding-block: 0.75rem;

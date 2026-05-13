@@ -1,5 +1,5 @@
 :is(.container) {
   .help {
-    margin-block-end: var(--space--gap);
+    margin-block-end: var(--gap);
   }
 }

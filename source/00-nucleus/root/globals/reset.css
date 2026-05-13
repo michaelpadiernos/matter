@@ -102,7 +102,7 @@
 
   :is(ul, ol):not(.links),
   :is(ul, ol)[role="list"] {
-    margin-inline-start: var(--space--gap-alt);
+    margin-inline-start: var(--space--gap--002);
   }
 
   a:not([class]) {

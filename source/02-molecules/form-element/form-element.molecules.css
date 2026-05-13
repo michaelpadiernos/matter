@@ -1,0 +1,25 @@
+:is(.form-item) {
+  &.form-type--checkbox,
+  &.form-type--radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space--gap--002);
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-block-start: var(--space--gap--002);
+    }
+
+    > label {
+      font-weight: var(--font-weight--regular);
+      padding: 0;
+      order: 1;
+    }
+
+    > input {
+      order: 0;
+    }
+  }
+}
+

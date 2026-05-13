@@ -17,7 +17,7 @@
 
   main,
   footer {
-    --padding-block: var(--space--gap);
+    --padding-block: var(--gap);
 
     padding-block: var(--padding-block);
 
@@ -93,7 +93,6 @@
   }
 }
 
-/* stylelint-disable-next-line selector-class-pattern */
 :is(.permission-navigation) {
   .off-canvas {
     block-size: calc(100dvb - var(--toolbars-height));

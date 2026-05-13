@@ -1,7 +1,7 @@
 :is(.links) {
-  margin-inline-start: var(--space--gap-alt);
+  margin-inline-start: var(--space--gap--002);
   padding-inline: 0;
-  gap: var(--space--gap);
+  gap: var(--gap);
 
   &.inline {
     grid-auto-columns: max-content;

@@ -31,7 +31,7 @@
 :is(.site-header, .site-footer) {
   :is(.region) {
     a:not(.brand-item) {
-      padding-inline: var(--space--gap);
+      padding-inline: var(--gap);
     }
   }
 }

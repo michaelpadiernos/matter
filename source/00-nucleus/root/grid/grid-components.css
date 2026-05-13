@@ -4,7 +4,7 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
 
   .card {
     display: grid;
@@ -17,7 +17,7 @@
 .masonry {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
   align-items: start;
 
   > * {
@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: repeat(2, 1fr);
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
 
   .featured-main {
     grid-row: span 2;
@@ -60,7 +60,7 @@
     [content-start] min(65ch, 100%)
     [content-end] 1fr
     [full-end];
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
 
   > * {
     grid-column: content;
@@ -85,7 +85,7 @@
   display: grid;
   grid-template: "sidebar header" auto "sidebar main" 1fr "sidebar footer" auto / 250px 1fr;
   min-block-size: 100vb;
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
 
   .dashboard-sidebar {
     grid-area: sidebar;
@@ -126,7 +126,7 @@
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(var(--columns, 3), 1fr);
-  gap: var(--gap, 1rem);
+  gap: var(--space--gap, 1rem);
 
   &.gallery-auto {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -148,7 +148,7 @@
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
   align-items: start;
 
   .pricing-card {
@@ -192,7 +192,7 @@
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--gap, 1.5rem);
+  gap: var(--space--gap, 1.5rem);
 
   .stat-item {
     text-align: center;

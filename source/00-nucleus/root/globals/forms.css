@@ -1,6 +1,6 @@
 :is(.off-canvas) {
   form {
-    gap: var(--space--gap);
+    gap: var(--gap);
     grid-column: content;
     grid-auto-rows: max-content;
   }
@@ -68,10 +68,24 @@
     min-block-size: 10rem;
   }
 
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: var(--space--gap--005) 0 0 0;
+
+    &:first-child {
+      margin-block-start: 0;
+    }
+
+    > legend {
+      font-weight: var(--font-weight--bold);
+      margin-bottom: var(--space--003);
+    }
+  }
+
   :is(.form-item) {
     display: flex;
     flex-direction: column;
     gap: var(--space)
   }
-
 }

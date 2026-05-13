@@ -45,13 +45,13 @@
 
 /* Gap utilities */
 .grid-gap-sm {
-  gap: calc(var(--gap, 1.5rem) * 0.5);
+  gap: calc(var(--space--gap, 1.5rem) * 0.5);
 }
 
 .grid-gap-lg {
-  gap: calc(var(--gap, 1.5rem) * 1.5);
+  gap: calc(var(--space--gap, 1.5rem) * 1.5);
 }
 
 .grid-gap-xl {
-  gap: calc(var(--gap, 1.5rem) * 2);
+  gap: calc(var(--space--gap, 1.5rem) * 2);
 }

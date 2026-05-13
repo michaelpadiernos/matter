@@ -21,7 +21,7 @@
 
   blockquote {
     border-inline-start: var(--space) solid var(--default-accent);
-    padding-inline: var(--space--gap);
+    padding-inline: var(--gap);
     margin-inline: 0;
   }
 
@@ -30,6 +30,13 @@
     font-size: var(--font-size--default);
     vertical-align: center;
     border-radius: var(--border-radius--alternate);
+  }
+
+  table,
+  th,
+  td,
+  tr {
+    vertical-align: baseline;
   }
 
   table {
@@ -42,8 +49,10 @@
 
     caption {
       display: table-caption;
+      text-align: left;
+      font-weight: var(--font-weight--bold);
       font-size: var(--font-size--alt--003);
-      margin: .5em 0 .75em;
+      margin: 0 0 .75em;
     }
 
     tr {
@@ -53,21 +62,41 @@
     th {
       font-weight: 700;
       text-align: left;
-      padding-block: var(--space--gap-alt);
+      padding-block: var(--space--gap--002);
+      white-space: nowrap;
+
+      &:is(.col--title) {
+        inline-size: 50%;
+      }
+
+      &:is(.col--content-type),
+      &:is(.col--status),
+      &:is(.col--operations) {
+        inline-size: auto;
+      }
+
+      &:is(.col--author) {
+        inline-size: 5%;
+      }
+
+      &:is(.col--updated) {
+        inline-size: 18%;
+      }
     }
 
     td {
-      padding-block: var(--space--gap-alt);
-      vertical-align: baseline;
+      padding-block: var(--space--gap--002);
     }
 
     th,
     td {
       display: table-cell;
+      text-align: unset;
+      padding: 1px;
+    }
 
-      &:not(:first-child, :last-child) {
-        padding-inline: var(--space--gap-alt);
-      }
+    :is(.select-all) {
+      inline-size: 1%;
     }
   }
 }
